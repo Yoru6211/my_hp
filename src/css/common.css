@@ -1,0 +1,234 @@
+/* font-family: 'Cinzel', serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Noto Sans JP', sans-serif; */
+
+/* ページ全体 */
+html{
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+p{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+
+/* body */
+body{
+    font-family:'Lato' , sans-serif  ;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+}
+
+/* 背景色 */
+.default_bg{
+    width: 100%;
+    height: 100%;
+}
+
+.top_area_bg{
+    background: #000000;
+    transition: 1s ease-in;
+}
+
+.sec_area_bg{
+    background:#00818A;
+    transition: 1s ease-in;
+}
+
+.thr_area_bg{
+    background:#6C49B8;
+    transition: 1s ease-in;
+}
+
+/* ヘッダー */
+header{
+    width: 100%;
+}
+
+/* メニュー開いた時の背景 */
+.wrap_menu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* タイトル */
+header h1{
+    font-family: 'Cinzel', serif;
+    position:fixed;
+    margin: 0;
+    color: #ffffff;
+    font-size: 2em;
+    padding: 0.5em 0 0 0.5em;
+    text-align: left;
+}
+
+header h2{
+    font-family: 'Lato', sans-serif;
+    position: fixed;
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.5em;
+    top: 90px;
+    padding: 0 0 0 0.5em;
+}
+
+/* ハンバーガーメニューアイコン */
+#menu_icon{
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    color: #ffffff;
+    font-size: 4em;
+    cursor: pointer;
+}
+
+/* メニューリスト */
+#nav_list{
+    display: none;
+}
+
+header ul{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 100px 0 0 0;
+}
+
+header li{
+    font-size: 4em;
+    padding: 50px;
+    
+}
+
+header li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+
+
+/* トップページ */
+#top_area{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: #ffffff;
+}
+
+.top_image{
+    z-index: 1;
+}
+
+#arrow_left{
+    position: absolute;
+    font-size: 9em;
+    left: 0;
+    color: #6b778d;
+    opacity: 0.5;
+    z-index: 10;
+}
+
+#arrow_right{
+    position: absolute;
+    font-size: 9em;
+    right: 0;
+    color: #6b778d;
+    opacity: 0.5;
+    z-index: 10;
+}
+
+
+
+
+
+/* 新着情報_2ページ目*/
+#sec_area{
+    width:100%;
+    height: 100vh;
+}
+
+.new_img{
+    width: 30%;
+    height: auto;
+    padding: 20px 0;
+}
+
+.new_text_right{
+    float: right;  
+    padding: 20px 60px 0 0;
+    margin: 0;
+}
+
+.new_img_right{
+    width: 30%;
+    height: auto;
+    right: 0;
+    padding: 20px 0;
+}
+
+.new_text_left{
+    float: left;
+    margin: 0;  
+    padding: 20px 0 0 60px;
+}
+
+
+
+
+
+/* プロフィール_３ページ目 */
+#thr_area{
+    width: 100%;
+    height: 100vh;
+}
+
+.my_name{
+    text-align: center;
+    color: #ffffff;
+    padding-bottom: 30px;
+}
+
+.profile_text_wrapper{
+    text-align: center;
+}
+
+.profile_text{
+    display: inline-block;
+    text-align: left;
+}
+
+
+
+
+
+/* フッター */
+footer{    
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 14px;
+    background: #817F7F;
+    bottom: 0;    
+}
+
