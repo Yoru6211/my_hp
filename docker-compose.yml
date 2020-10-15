@@ -18,6 +18,7 @@ services:
             - './web:/my_hp/web'
             - './src:/var/www/html'
             - './web/default.conf:/etc/nginx/conf.d/default.conf'
+            - './web/nginx.conf:/etc/nginx/nginx.conf'
         tty: true
         stdin_open: true
         depends_on:

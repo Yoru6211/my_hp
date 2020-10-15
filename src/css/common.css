@@ -199,21 +199,31 @@ header li a{
     width: 100%;
     height: 100vh;
 }
-
 .my_name{
     text-align: center;
     color: #ffffff;
     padding-bottom: 30px;
 }
-
 .profile_text_wrapper{
     text-align: center;
 }
-
 .profile_text{
     display: inline-block;
     text-align: left;
 }
+
+
+
+
+/* お問い合わせ_5ページ目 */
+#fif_area{
+    width: 100%;
+    height: 100vh;
+}
+.contact-form{
+    text-align: center;
+}
+
 
 
 
@@ -231,4 +241,6 @@ footer{
     background: #817F7F;
     bottom: 0;    
 }
+
+
 
