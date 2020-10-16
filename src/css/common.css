@@ -12,11 +12,13 @@ h1{
     color: #ffffff;
     text-align: center;
     padding-bottom: 50px;
+    font-size: 3em;
+    font-family: 'Cinzel', serif;
 }
 
 p{
     color: #ffffff;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 
@@ -34,19 +36,24 @@ body{
     width: 100%;
     height: 100%;
 }
-
 .top_area_bg{
     background: #000000;
     transition: 1s ease-in;
 }
-
 .sec_area_bg{
-    background:#00818A;
+    background: #00818A;
     transition: 1s ease-in;
 }
-
 .thr_area_bg{
-    background:#6C49B8;
+    background: #6C49B8;
+    transition: 1s ease-in;
+}
+/* .for_area_bg{
+    background: ;
+    transition: 1s ease-in;
+} */
+.fif_area_bg{
+    background: #379392;
     transition: 1s ease-in;
 }
 
@@ -218,13 +225,37 @@ header li a{
 /* お問い合わせ_5ページ目 */
 #fif_area{
     width: 100%;
-    height: 100vh;
+    height: 50vh;
 }
 .contact-form{
     text-align: center;
 }
-
-
+#name{
+    width: 90%;
+    height: 4em;
+}
+#email{
+    width: 90%;
+    height: 4em;
+}
+#message{
+    width: 90%;
+    height: 4em;
+}
+.contact-form-area label{
+    color: #ffffff;
+    font-size: 20px;   
+}
+.contact-form-area input{
+    margin: 20px 0;
+}
+.contact-form-area textarea{
+    margin: 20px 0;
+}
+#contact-form-button{
+    width: 50%;
+    height: 50px;
+}
 
 
 

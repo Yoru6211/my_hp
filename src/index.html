@@ -60,12 +60,21 @@
                 <section id="fif_area">
                     <div class="contact-form">
                         <h1>お問い合わせ / Contact</h1>
-                        <p class="contact-name">お名前 / Name :</p>
-                        <input class="contact-name-area" type="text">
-                        <p class="contact-email">メールアドレス / Email :</p>
-                        <input class="contact-email-area" type="text">
-                        <p class="contact-message">お問い合わせ内容 / Message :</p>
-                        <input class="contact-message-area" type="text">
+                        <form class="contact-form-area">
+                            <div>
+                                <label for="name">お名前 / Name :</label>
+                                <input id="name" type="text" name="name">
+                            </div>
+                            <div>
+                                <label for="email">メールアドレス / Email :</label>
+                                <input id="email" type="mail" name="email">
+                            </div>
+                            <div>
+                                <label for="message">お問い合わせ内容 / Message :</label>
+                                <textarea id="message" name="message" cols="20" rows="4" maxlength="20"></textarea>
+                            </div>
+                            <input type="submit" id="contact-form-button">
+                        </form>
                     </div>
                 </section>
             </main>
