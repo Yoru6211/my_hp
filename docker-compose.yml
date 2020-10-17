@@ -4,7 +4,7 @@ services:
     ubuntu:
         build: ./ubuntu
         ports:
-            - '8888:8888'
+            - '8888:80'
         volumes:
             - './ubuntu:/my_hp/ubuntu'
         tty: true
@@ -50,3 +50,5 @@ services:
 
 volumes:
     my_db:
+
+        
