@@ -1,3 +1,4 @@
 FROM ubuntu:18.04
 RUN apt-get update
-EXPORT 80
+RUN apt-get install iputils-ping -y
+

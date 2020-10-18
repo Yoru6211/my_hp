@@ -1,3 +1,10 @@
+<?php
+$error = [];
+if ($_POST['name'] === ''){
+    $error['name'] = 'blank';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -60,20 +67,23 @@
                 <section id="fif_area">
                     <div class="contact-form">
                         <h1>お問い合わせ / Contact</h1>
-                        <form class="contact-form-area">
+                        <form class="contact-form-area" action="" novalidate>
                             <div>
                                 <label for="name">お名前 / Name :</label>
-                                <input id="name" type="text" name="name">
+                                <input id="name" type="text" name="name" required>
+                                <?php if ($error['name'] === 'blank'): ?>
+                                    <p class="error_msg">*お名前を入力してください。</p>
+                                <?php endif; ?>
                             </div>
                             <div>
                                 <label for="email">メールアドレス / Email :</label>
-                                <input id="email" type="mail" name="email">
+                                <input id="email" type="mail" name="email" required>
                             </div>
                             <div>
                                 <label for="message">お問い合わせ内容 / Message :</label>
-                                <textarea id="message" name="message" cols="20" rows="4" maxlength="20"></textarea>
+                                <textarea id="message" name="message" cols="20" rows="4" maxlength="20" required></textarea>
                             </div>
-                            <input type="submit" id="contact-form-button">
+                            <input type="submit" id="contact-form-button" value="確認画面へ">
                         </form>
                     </div>
                 </section>
