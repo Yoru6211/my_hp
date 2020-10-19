@@ -1,24 +1,45 @@
 <?php
+
+require('../isolation/functions.php');
+
+session_start();
 $error = [];
-if ($_POST['name'] === ''){
-    $error['name'] = 'blank';
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $post = filter_input_array(INPUT_POST, $_POST);
+    // フォーム送信時のエラーチェック
+    if ($post['name'] === ''){
+        $error['name'] = 'blank';
+    }
+    if ($post['email'] === ''){
+        $error['email'] = 'blank';
+    }else if (!filter_var($post['email'], FILTER_VALIDATE_EMAIL)){
+        $error['email'] = 'email';
+    }
+    if ($post['message'] === ''){
+        $error['message'] = 'blank';
+    }
+    // エラーがなければ確認画面へ
+    if(count($error) === 0){
+        $_SESSION['form'] = $post;
+        header('Location: http://localhost:8080/php/confirm.php');
+        exit();
+    }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="ja">
     <head>
         <meta charset="utf-8">
         <title>RenHattori PhotoGallery</title>
         <meta name="veiwport" content="width=device-width,initial-scale = 1"> 
-        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="http://localhost:8080/css/common.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
     </head>
-    
     <body>
+
         <div class="default_bg">
             <header>
                 <div class="wrap_menu">
@@ -67,23 +88,32 @@ if ($_POST['name'] === ''){
                 <section id="fif_area">
                     <div class="contact-form">
                         <h1>お問い合わせ / Contact</h1>
-                        <form class="contact-form-area" action="" novalidate>
+                        <form class="contact-form-area" action="" method="POST" novalidate>
                             <div>
                                 <label for="name">お名前 / Name :</label>
-                                <input id="name" type="text" name="name" required>
+                                <input id="name" type="text" name="name" value="<?php echo h($post['name']); ?>" required>
                                 <?php if ($error['name'] === 'blank'): ?>
-                                    <p class="error_msg">*お名前を入力してください。</p>
+                                    <p>*お名前を入力してください</p>
                                 <?php endif; ?>
                             </div>
                             <div>
                                 <label for="email">メールアドレス / Email :</label>
-                                <input id="email" type="mail" name="email" required>
+                                <input id="email" type="mail" name="email" value="<?php echo h($post['email']); ?>" required>
+                                <?php if ($error['email'] === 'blank'): ?>
+                                    <p>*Emailアドレスを入力してください</p>
+                                <?php endif; ?>
+                                <?php if ($error['email'] === 'email'): ?>
+                                    <p>*Emailアドレスを正しく入力してください</p>
+                                <?php endif; ?>
                             </div>
                             <div>
                                 <label for="message">お問い合わせ内容 / Message :</label>
-                                <textarea id="message" name="message" cols="20" rows="4" maxlength="20" required></textarea>
+                                <textarea id="message" name="message" cols="20" rows="4" maxlength="20" required><?php echo h($post['message']); ?></textarea>
+                                <?php if ($error['message'] === 'blank'): ?>
+                                    <p>*お問い合わせ内容を入力してください</p>
+                                <?php endif; ?>
                             </div>
-                            <input type="submit" id="contact-form-button" value="確認画面へ">
+                            <button type="submit">確認画面へ</button>
                         </form>
                     </div>
                 </section>
@@ -92,7 +122,6 @@ if ($_POST['name'] === ''){
                 <small>© REN HATTORI PHOTO GALLARY</small>
             </footer>
         </div>
-                <script type="text/javascript" src="js/common.js"></script>
+                <script type="text/javascript" src="http://localhost:8080/js/common.js"></script>
      </body>
-
 </html>

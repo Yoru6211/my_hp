@@ -6,7 +6,7 @@ services:
         ports:
             - '8888:8888'
         volumes:
-            - './ubuntu:/my_hp/ubuntu'
+            - '.:/my_hp'
         tty: true
         stdin_open: true
         networks:
@@ -17,9 +17,11 @@ services:
         build: ./web
         ports:
             - '8080:80'
+        # depends_on:
+        #     - app
         volumes:
-            - './web:/my_hp/web'
-            - './src:/var/www/html'
+            - '.:/my_hp'
+            - './work/src:/my_hp/work/src'
             - './web/default.conf:/etc/nginx/conf.d/default.conf'
             - './web/nginx.conf:/etc/nginx/nginx.conf'
         tty: true
@@ -50,8 +52,8 @@ services:
     app:
         image: php:7.4-fpm
         volumes:
-            - './app:/my_hp/app'
-            - './src:/var/www/html'
+            - '.:/my_hp'
+            - './work/src:/my_hp/work/src'
         networks:
             my_hp_net:
                 ipv4_address: 192.168.0.5
