@@ -1,32 +1,86 @@
-<?php
+<?php 
 
-require('../../isolation/functions.php');
+
+require ('../../isolation/functions.php');
 
 session_start();
+$post = $_SESSION['form'];
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+ 
+require '../../../app/vendor/autoload.php';
+
+$mail = new PHPMailer(true);
+ 
+try{
+    $host = 'smtp.gmail.com';
+    $username = 'ren.33.h@gmail.com';
+    $password = '';
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $from = $post['email'];
+    // $fromname = $post['name'];
+
+    $to = 'ren.33.h@gmail.com';
+    $toname = 'yoru';
+
+    $subject = 'お問い合わせが届きました';
+    $body = <<<EOT
+            名前: {$post['name']}
+            メールアドレス: {$post['email']}
+            お問い合わせ内容: {$post['message']}
+            EOT;;
+    }
+
+    $mail->SMTPDebug = 2;
+    $mail->isSMTP();
+    $mail->SMTPAuth = true;
+    $mail->Host = $host;
+    $mail->Username = $username;
+    $mail->Password = $password;
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+    $mail->Charset = "utf-8";
+    $mail->Encoding = "base64";
+    $mail->setFrom($from,$fromname);
+    $mail->addAddress($to,$toname);
+    $mail->Subject = $subject;
+    $mail->Body = $body;
+
+    $mail->send();
+    echo '成功';
+}catch(Exception $e){
+    echo '失敗:',$mail->Erroinfo;
+} 
+
+
+
 // 直接confirm.phpにアクセスされた場合index.phpへ戻す
-if(!isset($_SESSION['form'])){
-    header('Location: ../index.php');
-    exit();
-}else{
-    $post = $_SESSION['form'];
-}
+// if(!isset($_SESSION['form'])){
+//     header('Location: ../index.php');
+//     exit();
+// }else{
+//     $post = $_SESSION['form'];
+// }
 
 // メールの送信（メールサーバーの設定が必要）
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    // $to = '宛先'
-    $from = $post['email'];
-    $subject = 'お問い合わせが届いています';
-    $body = <<<EOT
-        名前: {$post['name']}
-        メールアドレス: {$post['email']}
-        お問い合わせ内容: {$post['message']}
-        EOT;
+// if($_SERVER['REQUEST_METHOD'] === 'POST'){
+//     // $to = '宛先'
+//     $from = $post['email'];
+//     $subject = 'お問い合わせが届いています';
+//     $body = <<<EOT
+//         名前: {$post['name']}
+//         メールアドレス: {$post['email']}
+//         お問い合わせ内容: {$post['message']}
+//         EOT;
 
-        // セッションを削除して送信完了画面へ
-        unset($_SESSON['form']);
-        header('Location: send.html');
-        exit();
-}
+//         // セッションを削除して送信完了画面へ
+//         unset($_SESSON['form']);
+//         header('Location: send.html');
+//         exit();
+// }
 
 ?>
 

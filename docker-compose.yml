@@ -54,9 +54,22 @@ services:
         volumes:
             - '.:/my_hp'
             - './work/src:/my_hp/work/src'
+        tty: true
+        stdin_open: true
         networks:
             my_hp_net:
                 ipv4_address: 192.168.0.5
+
+    composer:
+        image: composer:latest
+        command: install
+        restart: 'no'
+        volumes:
+            - ./app:/app
+  
+    
+
+    
 
 networks:
     my_hp_net:
