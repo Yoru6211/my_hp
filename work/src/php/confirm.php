@@ -16,24 +16,25 @@ $mail = new PHPMailer(true);
  
 try{
     $host = 'smtp.gmail.com';
-    $username = 'ren.33.h@gmail.com';
+    $username = '';
     $password = '';
-
+    
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    $from = $post['email'];
-    // $fromname = $post['name'];
-
-    $to = 'ren.33.h@gmail.com';
-    $toname = 'yoru';
-
-    $subject = 'お問い合わせが届きました';
-    $body = <<<EOT
-            名前: {$post['name']}
-            メールアドレス: {$post['email']}
-            お問い合わせ内容: {$post['message']}
-            EOT;;
+        $from = $post['email'];
+        $fromname = 'お問い合わせフォーム';
+        
+        $to = '';
+        $toname = 'yoru';
+        
+        $subject = 'お問い合わせが届きました';
+        $body = <<<EOT
+        名前: {$post['name']}
+        メールアドレス: {$post['email']}
+        お問い合わせ内容:
+         {$post['message']}
+        EOT;
     }
-
+    
     $mail->SMTPDebug = 2;
     $mail->isSMTP();
     $mail->SMTPAuth = true;
@@ -42,7 +43,7 @@ try{
     $mail->Password = $password;
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
-    $mail->Charset = "utf-8";
+    $mail->CharSet = "utf-8";
     $mail->Encoding = "base64";
     $mail->setFrom($from,$fromname);
     $mail->addAddress($to,$toname);
@@ -50,9 +51,9 @@ try{
     $mail->Body = $body;
 
     $mail->send();
-    echo '成功';
+    echo '送信完了しました';
 }catch(Exception $e){
-    echo '失敗:',$mail->Erroinfo;
+    echo 'メールの送信に失敗しました:',$mail->Erroinfo;
 } 
 
 
