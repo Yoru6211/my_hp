@@ -16,14 +16,14 @@ $mail = new PHPMailer(true);
  
 try{
     $host = 'smtp.gmail.com';
-    $username = '';
-    $password = '';
+    $username = $my_name;
+    $password = $$my_password;
     
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $from = $post['email'];
         $fromname = 'お問い合わせフォーム';
         
-        $to = '';
+        $to = $my_name;
         $toname = 'yoru';
         
         $subject = 'お問い合わせが届きました';
