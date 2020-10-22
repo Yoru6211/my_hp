@@ -52,7 +52,7 @@ services:
     app:
         build: ./app
         volumes:
-            # - '.:/my_hp'
+            - '.:/my_hp'
             - './work/src:/my_hp/work/src'
         tty: true
         stdin_open: true

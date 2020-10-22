@@ -1,6 +1,6 @@
 <?php
 
-require('../isolation/functions.php');
+require ('../isolation/functions.php');
 
 session_start();
 $error = [];

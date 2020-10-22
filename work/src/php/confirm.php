@@ -1,6 +1,4 @@
 <?php 
-
-
 require ('../../isolation/functions.php');
 require ('personal.php');
 
@@ -12,6 +10,12 @@ if(!isset($_SESSION['form'])){
     exit();
 }else{
     $post = $_SESSION['form'];
+}
+// データベースへお問い合わせ情報を保存
+try{
+    $db = new PDO('mysql:dbname=my_hp_db;host=192.168.0.4;charset=utf8', 'root', '98765');
+}catch(PDOException $e){
+    echo 'データベースに接続できませんでした' . $e->getMessage();
 }
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -64,7 +68,7 @@ try{
     header('Location: send.html');
     exit();
 }catch(Exception $e){
-    echo 'メールの送信に失敗しました:',$mail->Erroinfo;
+    echo 'メールの送信に失敗しました: ' . $mail->Erroinfo;
 } 
 
 ?>
