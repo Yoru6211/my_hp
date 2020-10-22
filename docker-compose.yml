@@ -33,7 +33,7 @@ services:
 
     db:
         image: mysql:8.0.21
-        env_file: ./mysql/db.env
+        # env_file: ./mysql/db.env
         environment:
             MYSQL_ROOT_PASSWORD: '98765'
             MYSQL_DATABASE: 'my_hp_db'
@@ -50,9 +50,9 @@ services:
                 ipv4_address: 192.168.0.4       
                     
     app:
-        image: php:7.4-fpm
+        build: ./app
         volumes:
-            - '.:/my_hp'
+            # - '.:/my_hp'
             - './work/src:/my_hp/work/src'
         tty: true
         stdin_open: true

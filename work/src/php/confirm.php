@@ -2,28 +2,36 @@
 
 
 require ('../../isolation/functions.php');
+require ('personal.php');
 
 session_start();
-$post = $_SESSION['form'];
+
+// 直接confirm.phpにアクセスされた場合index.phpへ戻す
+if(!isset($_SESSION['form'])){
+    header('Location: ../index.php');
+    exit();
+}else{
+    $post = $_SESSION['form'];
+}
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
- 
+
 require '../../../app/vendor/autoload.php';
 
 $mail = new PHPMailer(true);
- 
+
 try{
     $host = 'smtp.gmail.com';
-    $username = $my_name;
-    $password = $$my_password;
+    $username = $my_username;
+    $password = $my_password;
     
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $from = $post['email'];
         $fromname = 'お問い合わせフォーム';
         
-        $to = $my_name;
+        $to = $my_username;
         $toname = 'yoru';
         
         $subject = 'お問い合わせが届きました';
@@ -52,36 +60,12 @@ try{
 
     $mail->send();
     echo '送信完了しました';
+    unset($_SESSON['form']);
+    header('Location: send.html');
+    exit();
 }catch(Exception $e){
     echo 'メールの送信に失敗しました:',$mail->Erroinfo;
 } 
-
-
-
-// 直接confirm.phpにアクセスされた場合index.phpへ戻す
-// if(!isset($_SESSION['form'])){
-//     header('Location: ../index.php');
-//     exit();
-// }else{
-//     $post = $_SESSION['form'];
-// }
-
-// メールの送信（メールサーバーの設定が必要）
-// if($_SERVER['REQUEST_METHOD'] === 'POST'){
-//     // $to = '宛先'
-//     $from = $post['email'];
-//     $subject = 'お問い合わせが届いています';
-//     $body = <<<EOT
-//         名前: {$post['name']}
-//         メールアドレス: {$post['email']}
-//         お問い合わせ内容: {$post['message']}
-//         EOT;
-
-//         // セッションを削除して送信完了画面へ
-//         unset($_SESSON['form']);
-//         header('Location: send.html');
-//         exit();
-// }
 
 ?>
 
