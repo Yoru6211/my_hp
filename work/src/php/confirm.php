@@ -1,8 +1,6 @@
 <?php 
-require ('../../isolation/functions.php');
-require ('personal.php');
-
 session_start();
+require ('../../isolation/functions.php');
 
 // 直接confirm.phpにアクセスされた場合index.phpへ戻す
 if(!isset($_SESSION['form'])){
@@ -12,83 +10,81 @@ if(!isset($_SESSION['form'])){
     $post = $_SESSION['form'];
 }
 
-// PHPMailer読み込み
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+// // PHPMailer読み込み
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\SMTP;
+// use PHPMailer\PHPMailer\Exception;
 
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
+// if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-    // データベースへお問い合わせ情報を保存
-    try{
-        $db = new PDO('mysql:dbname=my_hp_db;host=192.168.0.4;charset=utf8', 'root', '98765');
-    }catch(PDOException $e){
-        echo 'データベースに接続できませんでした' . $e->getMessage();
-    }
+//     // データベースへお問い合わせ情報を保存
+//     try{
+//         $db = new PDO('mysql:dbname=my_hp_db;host=192.168.0.4;charset=utf8', 'root', '98765');
+//     }catch(PDOException $e){
+//         echo 'データベースに接続できませんでした' . $e->getMessage();
+//     }
 
-    $sql = "INSERT INTO contact (name, email, message, created) VALUES(:name, :email, :message, now())";
+//     $sql = "INSERT INTO contact (name, email, message, created) VALUES(:name, :email, :message, now())";
 
-    $stmt = $db->prepare($sql);
+//     $stmt = $db->prepare($sql);
 
-    $params = array(':name' => $post['name'], ':email' => $post['email'], ':message' => $post['message']);
+//     $params = array(':name' => $post['name'], ':email' => $post['email'], ':message' => $post['message']);
 
-    $stmt->execute($params);
+//     $stmt->execute($params);
 
 
-    // PHPMailer
-    require '../../../app/vendor/autoload.php';
+//     // PHPMailer
+//     require '../../../app/vendor/autoload.php';
 
-    $mail = new PHPMailer(true);
+//     $mail = new PHPMailer(true);
 
-    // 例外処理
-    try{
-    // Gmailの認証
-    $host = 'smtp.gmail.com';
-    $username = $my_account;
-    $password = $my_password;
+//     // 例外処理
+//     try{
+//     // Gmailの認証
+//     $host = 'smtp.gmail.com';
+//     $username = $my_account;
+//     $password = $my_password;
 
-    // 差し出し
-    $sender = $post['email'];
-    $fromname = 'お問い合わせフォーム';
+//     // 差し出し
+//     $sender = $post['email'];
+//     $fromname = 'お問い合わせフォーム';
 
-    // 宛先
-    $to = $receive;
-    $toname = 'yoru';
+//     // 宛先
+//     $to = $receive;
+//     $toname = 'yoru';
 
-    // 件名・内容
-    $subject = 'お問い合わせが届きました';
-    $body = <<<EOT
-    名前: {$post['name']}
-    メールアドレス: {$post['email']}
-    お問い合わせ内容:
-        {$post['message']}
-    EOT;
+//     // 件名・内容
+//     $subject = 'お問い合わせが届きました';
+//     $body = <<<EOT
+//     名前: {$post['name']}
+//     メールアドレス: {$post['email']}
+//     お問い合わせ内容:
+//         {$post['message']}
+//     EOT;
 
-    $mail->SMTPDebug = 2;
-    $mail->isSMTP();
-    $mail->SMTPAuth = true;
-    $mail->Host = $host;
-    $mail->Username = $username;
-    $mail->Password = $password;
-    $mail->SMTPSecure = 'tls';
-    $mail->Port = 587;
-    $mail->CharSet = "utf-8";
-    $mail->Encoding = "base64";
-    $mail->setFrom($sender,$fromname);
-    $mail->addAddress($to,$toname);
-    $mail->Subject = $subject;
-    $mail->Body = $body;
+//     $mail->SMTPDebug = 2;
+//     $mail->isSMTP();
+//     $mail->SMTPAuth = true;
+//     $mail->Host = $host;
+//     $mail->Username = $username;
+//     $mail->Password = $password;
+//     $mail->SMTPSecure = 'tls';
+//     $mail->Port = 587;
+//     $mail->CharSet = "utf-8";
+//     $mail->Encoding = "base64";
+//     $mail->setFrom($sender,$fromname);
+//     $mail->addAddress($to,$toname);
+//     $mail->Subject = $subject;
+//     $mail->Body = $body;
 
-    $mail->send();
-    unset($_SESSON['form']);
-    header('Location: send.html');
-    echo '送信完了しました';
-    exit();
+//     $mail->send();
+//     unset($_SESSION['form']);
+//     exit();
 
-    }catch(Exception $e){
-    echo 'メールの送信に失敗しました: ' . $mail->Erroinfo;
-    } 
-}
+//     }catch(Exception $e){
+//     echo 'メールの送信に失敗しました: ' . $mail->Errorinfo;
+//     } 
+// }
 ?>
 
 <!DOCTYPE html>
@@ -105,9 +101,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 <body>
 
+
 <div class="contact-form">
                 <h1>お問い合わせ内容確認 / Confirm your Name/Email/Message</h1>
-                <form class="contact-form-area" action="send.html" method="POST">
+                <form class="contact-form-area" action="send.php" method="POST">
                     <div>
                         <label for="name">お名前 / Name :</label>
                         <p><?php echo h($post['name']); ?></p>

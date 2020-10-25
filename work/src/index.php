@@ -1,10 +1,16 @@
 <?php
-
+session_start();  
 require ('../isolation/functions.php');
 
-session_start();
-$error = [];
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
+//   CSRF攻撃対策
+createToken();
+  
+  // エラー初期化
+  $error = [];
+  
+  // 送信ボタンが押された時の処理
+  if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    validateToken();
     $post = filter_input_array(INPUT_POST, $_POST);
     // フォーム送信時のエラーチェック
     if ($post['name'] === ''){
@@ -114,6 +120,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                                 <?php endif; ?>
                             </div>
                             <button type="submit">確認画面へ</button>
+                            <input type="hidden" name="token" value="<?php echo h($_SESSION['token']); ?>">
                         </form>
                     </div>
                 </section>
