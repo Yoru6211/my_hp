@@ -79,7 +79,7 @@ $mail->addAddress($to,$toname);
 $mail->Subject = $subject;
 $mail->Body = $body;
 
-// $mail->send();
+$mail->send();
 unset($_SESSION['form']);
 
 

@@ -1,18 +1,7 @@
 version: '3'
 
 services:
-    ubuntu:
-        build: ./ubuntu
-        ports:
-            - '8888:8888'
-        volumes:
-            - '.:/my_hp'
-        tty: true
-        stdin_open: true
-        networks:
-            my_hp_net:
-                ipv4_address: 192.168.0.2
-
+    
     web:
         build: ./web
         ports:
