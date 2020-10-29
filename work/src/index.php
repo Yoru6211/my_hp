@@ -49,60 +49,56 @@ createToken();
         <div class="default_bg">
             <header>
                 <div class="wrap_menu">
+                <div class="site_name">
                     <h1>REN HATTORI <br>　PHOTO GALLARY</h1>
                     <h2>#刻のしおり</h2>
+                </div>    
                     <i id="menu_icon" class="fas fa-bars"></i>
                     <nav id="nav_list">
                         <ul>
-                            <li><a href="">新着情報<br>New</a></li>
-                            <li><a href="">プロフィール<br>Profile</a></li>
-                            <li><a href="">フォトギャラリー<br>PhotoGallery</a></li>
-                            <li><a href="">ブログ<br>Blog</a></li>
-                            <li><a href="">お問い合わせ<br>Contact</a></li>
+                            <li><a id="top_link" href="#top_area">トップページ<br>Top</a></li>
+                            <li><a id="sec_link" href="#sec_area">プロフィール<br>Profile</a></li>
+                            <li><a id="thi_link" href="#thi_area">お問い合わせ<br>Contact</a></li>
                         </ul>
                     </nav>
                 </div>
             </header>
             <main>
                 <section id="top_area">
+                        <h2>メトロポリタン大聖堂</h2>
                         <img class="top_image" src="../img/basilica.jpg" width="100%" height="auto" alt="メトロポリタン大聖堂の画像">
                         <i id="arrow_left" class="fas fa-chevron-circle-left"></i>
                         <i id="arrow_right" class="fas fa-chevron-circle-right"></i>
+                        <ul>
+                            <li>機種</li>
+                            <li>焦点距離</li>
+                            <li>撮影モード</li>
+                            <li>絞り</li>
+                            <li>シャッタースピード</li>
+                            <li>ISO感度</li>
+                            <li>露出補正</li>
+                            <li>ホワイトバランス</li>
                 </section>
                 <section id="sec_area">
-                    <h1>新着情報 / New</h1>
-    
-                    <img class="new_img" src="../img/dragonfly.jpg">
-                    <p class="new_text_right">テストテキストテストテキストテストテキストテストテキスト<br>abcdefghijklmnopqrstuvwxyz<br>123456789101112131415161718192021222324252627282930</p>
-    
-                    <img class="new_img_right" src="../img/dragonfly.jpg">
-                    <p class="new_text_left">テストテキストテストテキストテストテキストテストテキスト<br>abcdefghijklmnopqrstuvwxyz<br>123456789101112131415161718192021222324252627282930</p>
-    
-                    <img class="new_img" src="../img/dragonfly.jpg">
-                    <p class="new_text_right">テストテキストテストテキストテストテキストテストテキスト<br>abcdefghijklmnopqrstuvwxyz<br>123456789101112131415161718192021222324252627282930</p>
-                </section>
-                <section id="thr_area">
-                    <h1>プロフィール / Profile</h1>
-                    <h2 class="my_name">REN HATTORI</h2>
-                    <div class="profile_text_wrapper">
-                    <p class="profile_text">1986年生まれ<br>愛知県豊橋市出身、同県豊川市在住<br>21歳の頃１年間フィージとオーストラリアに語学留学＆ワーキングホリデーを使用して生活<br>その後30歳まで8年間テニスインストラクターとしてテニススクールへ勤務<br>趣味のカメラで撮影した写真を当サイトにて公開しております<br><br>Born in 1986<br>From Toyohashi,Aichi,Japan<br>Live in Toyokawa<br>Stayed Fiji and Australia for a year Since 21-years-old<br>Worked for Tennis Instructor for 8 years until 30-years-old<br>Release my photos that took as my hobby at this Website</p>
+                    <div class="profile_position">
+                        <h1>プロフィール / Profile</h1>
+                        <h2>REN HATTORI</h2>
+                        <div class="profile_text_wrapper">
+                        <p>1986年生まれ<br>愛知県豊橋市出身、同県豊川市在住<br>21歳の頃１年間フィージとオーストラリアに語学留学＆ワーキングホリデーを使用して生活<br>その後30歳まで8年間テニスインストラクターとしてテニススクールへ勤務<br>趣味のカメラで撮影した写真を当サイトにて公開しております<br><br>Born in 1986<br>From Toyohashi,Aichi,Japan<br>Live in Toyokawa<br>Stayed Fiji and Australia for a year Since 21-years-old<br>Worked for Tennis Instructor for 8 years until 30-years-old<br>Release my photos that took as my hobby at this Website</p>
                     </div>
                 </section>
-                <section id="for_area">
-
-                </section>
-                <section id="fif_area">
-                    <div class="contact-form">
+                <section id="thi_area">
+                    <div class="contact_form">
                         <h1>お問い合わせ / Contact</h1>
-                        <form class="contact-form-area" action="" method="POST" novalidate>
-                            <div>
+                        <form class="contact_form_area" action="" method="POST" novalidate>
+                            <div class="input_area">
                                 <label for="name">お名前 / Name :</label>
                                 <input id="name" type="text" name="name" value="<?php echo h($post['name']); ?>" required>
                                 <?php if ($error['name'] === 'blank'): ?>
                                     <p>*お名前を入力してください</p>
                                 <?php endif; ?>
                             </div>
-                            <div>
+                            <div class="input_area">
                                 <label for="email">メールアドレス / Email :</label>
                                 <input id="email" type="mail" name="email" value="<?php echo h($post['email']); ?>" required>
                                 <?php if ($error['email'] === 'blank'): ?>
@@ -112,7 +108,7 @@ createToken();
                                     <p>*Emailアドレスを正しく入力してください</p>
                                 <?php endif; ?>
                             </div>
-                            <div>
+                            <div class="input_area">
                                 <label for="message">お問い合わせ内容 / Message :</label>
                                 <textarea id="message" name="message" cols="20" rows="4" maxlength="20" required><?php echo h($post['message']); ?></textarea>
                                 <?php if ($error['message'] === 'blank'): ?>
