@@ -49,10 +49,11 @@ createToken();
         <div class="default_bg">
             <header>
                 <div class="wrap_menu">
-                <div class="site_name">
-                    <h1>REN HATTORI <br>　PHOTO GALLARY</h1>
-                    <h2>#刻のしおり</h2>
-                </div>    
+                    </div>
+                    <div class="site_name">
+                        <h1>REN HATTORI <br>　PHOTO GALLARY</h1>
+                        <h2>#刻のしおり</h2>
+                    </div>    
                     <i id="menu_icon" class="fas fa-bars"></i>
                     <nav id="nav_list">
                         <ul>
@@ -61,23 +62,23 @@ createToken();
                             <li><a id="thi_link" href="#thi_area">お問い合わせ<br>Contact</a></li>
                         </ul>
                     </nav>
-                </div>
             </header>
             <main>
                 <section id="top_area">
-                        <h2>メトロポリタン大聖堂</h2>
-                        <img class="top_image" src="../img/basilica.jpg" width="100%" height="auto" alt="メトロポリタン大聖堂の画像">
-                        <i id="arrow_left" class="fas fa-chevron-circle-left"></i>
-                        <i id="arrow_right" class="fas fa-chevron-circle-right"></i>
-                        <ul>
-                            <li>機種</li>
-                            <li>焦点距離</li>
-                            <li>撮影モード</li>
-                            <li>絞り</li>
-                            <li>シャッタースピード</li>
-                            <li>ISO感度</li>
-                            <li>露出補正</li>
-                            <li>ホワイトバランス</li>
+                    <div id="image_area01">
+                        <img  class="slide_image" src="../img/basilica.jpg" width="100%" height="auto" alt="">
+                        <h2>タイトル１</h2>
+                    </div>
+                    <div id="image_area02">
+                        <img  class="slide_image" src="../img/dragonfly.jpg" width="100%" height="auto" alt="">
+                        <h2>タイトル１</h2>
+                    </div>
+                    <div id="image_area03">
+                        <img  class="slide_image" src="../img/marigold.jpg" width="100%" height="auto" alt="">
+                        <h2>タイトル１</h2>
+                    </div>
+                    <i id="arrow_left" class="fas fa-chevron-circle-left"></i>
+                    <i id="arrow_right" class="fas fa-chevron-circle-right"></i>
                 </section>
                 <section id="sec_area">
                     <div class="profile_position">

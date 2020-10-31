@@ -11,10 +11,17 @@ html{
 h1{
     color: #ffffff;
     font-family: 'Cinzel', serif;
+    font-size: 3em;
+}
+
+h2{
+    color: #ffffff;
+    font-size: 2em;
 }
 
 p{
     color: #ffffff;
+    font-size: 1.5em;
 }
 
 
@@ -51,20 +58,17 @@ header{
 }
 .site_name{
     position: fixed;
+    z-index: 150;
 }
 header h1{
     font-family: 'Cinzel', serif;
     margin: 0;
-    color: #ffffff;
-    font-size: 4em;
     padding: 0.5em 0 0 0.5em;
     text-align: left;
 }
 header h2{
     font-family: 'Lato', sans-serif;
     margin: 0;
-    color: #ffffff;
-    font-size: 3em;
     top: 90px;
     padding: 0 0 0 0.5em;
 }
@@ -86,11 +90,13 @@ header h2{
 
 /* メニュー開いた時の背景 */
 .wrap_menu{
+    display: none;
     position: fixed;
     width: 100%;
     height: 100vh;
     top: 0;
-    z-index: 1000;
+    background: #6b778d;
+    z-index: 50;
 }
 
 /* メニューリスト */
@@ -98,6 +104,7 @@ header h2{
     display: none;
     position: fixed;
     width: 100%;
+    z-index: 150;
 }
 header ul{
     position: absolute;
@@ -132,16 +139,20 @@ header li a{
 }
 #top_area h2{
     align-items: left;
+    margin: 1em 1.5em;
 }
 .top_image{
     z-index: 10;
     align-items: center;
+    margin-top: 50px;
 }
 #arrow_left{
+    visibility: hidden;
     position: absolute;
     font-size: 9em;
     left: 0;
     color: #6b778d;
+    cursor: pointer;
     opacity: 0.5;
     z-index: 20;
 }
@@ -150,16 +161,54 @@ header li a{
     font-size: 9em;
     right: 0;
     color: #6b778d;
+    cursor: pointer;
     opacity: 0.5;
-    z-index: 10;
+    z-index: 20;
+}
+#top_area ul{
+    list-style-type: none;
+    margin-top: 0;
 }
 #top_area li{
+    font-size: 2em;
     line-height: 200%;
 }
-
-
-
-
+/* 画像エリア */
+#image_area01{
+    display: none;
+}
+#image_area02{
+    display: none;
+}
+#image_area03{
+    display: none;
+}
+.remove_blur{
+    filter: blur(0);
+    animation-name: removeblur;
+    animation-duration: 2s;
+}
+@keyframes removeblur{
+    0%{
+        filter: blur(10px);
+    }
+    100%{
+        filter: blur(0);
+    }
+}
+.add_blur{
+    filter: blur(10px);
+    animation-name: addblur;
+    animation-duration: 2s;
+}
+@keyframes addblur{
+    0%{
+        filter: blur(0);
+    }
+    100%{
+        filter: blur(10px);
+    }
+}
 
 
 
@@ -182,16 +231,14 @@ header li a{
     -webkit-transform: translateY(-50%);
 }
 #sec_area h1{
-    font-size: 3em;
     text-align: center;
     margin-bottom: 80px;
 }
 #sec_area h2{
     /* text-align: center; */
     color: #ffffff;
-    font-size: 2.5em;
-    padding-left: 1em;
-    
+    padding-left: 2em;
+
 }
 .profile_text_wrapper{
     text-align: center;
@@ -199,9 +246,9 @@ header li a{
 #sec_area p{
     display: inline-block;
     text-align: left;
-    font-size: 2em;
+    font-size: 1.8em;
     line-height: 200%;
-    padding: 0 1em;
+    padding: 0 2em;
 }
 
 
@@ -220,6 +267,10 @@ header li a{
     left: 50%;
     transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
+}
+#thi_area h1{
+    text-align: center;
+    margin-bottom: 80px;
 }
 #name{
     width: 100%;
@@ -261,7 +312,6 @@ header li a{
     text-align: center;
     background: #379392;
     color: #ffffff;
-    /* border-radius: 100vh; */
     box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.3);
     outline: none;
     border: none;
@@ -286,7 +336,8 @@ footer{
     color: #ffffff;
     font-size: 14px;
     background: #817F7F;
-    bottom: 0;    
+    bottom: 0;   
+    z-index: 150; 
 }
 
 
