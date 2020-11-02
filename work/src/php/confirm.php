@@ -105,34 +105,22 @@ require ('../../isolation/functions.php');
     <div class="confirm_area">
         <h1>お問い合わせ内容確認</h1>
         <form action="send.php" method="POST">
-            <div class="user_info">
+            <div class="user">
                 <table>
                     <tr>
-                        <th>名前</th><td></td>
+                        <th>お名前 / Name</th><td><?php echo h($post['name']); ?></td>
                     </tr>
                     <tr>
-                        <th>メール</th><td></td>
+                        <th>メールアドレス / Email</th><td><?php echo h($post['email']); ?></td>
                     </tr>
                     <tr>
-                        <th>メッセージ</th><td></td>
+                        <th>お問い合わせ内容 / Message</th><td><?php echo nl2br(h($post['message'])); ?></td>
                     </tr>
                     
 
                 </table>
-                <label for="name">お名前 / Name :</label>
-                <p>煉獄</p>
-                <!-- <p><?php echo h($post['name']); ?></p> -->
             </div>
-            <div class="user_info">
-                <label for="email">メールアドレス / Email :</label>
-                <p>test@mail.com</p>
-                <!-- <p><?php echo h($post['email']); ?></p> -->
-            </div>
-            <div class="user_info">
-                <label for="message">お問い合わせ内容 / Message :</label>
-                <p>lorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テスト</p>
-                <!-- <p><?php echo nl2br(h($post['message'])); ?></p> -->
-            </div>
+            <p></p>
             <div class="buttons">
                 <a href="../index.php">戻る</a>
                 <button type="submit">送信する</button>

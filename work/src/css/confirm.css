@@ -18,13 +18,36 @@ p{
 }
 /* テーブル */
 table{
+    width: 80%;
+    /* font-size: 2em; */
+    font-family: 'Noto Sans JP', sans-serif;
+}
+th{
+    width: 20%;
+    border: solid 1px #379392;
+    background: #379392;
+    font-size: 1.5em;
+}
+td{
     width: 60%;
+    border: solid 1px #ffffff;
+    background: #ffffff;
+    color: #000000;
+    text-align: left;
+    padding: 5px;
+    font-size: 2em;
+}
+.tr{
+    padding: 0;
 }
 .confirm_area label{
     font-size: 2em;   
 }
-.user_info{
+.user{
     margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .buttons{
     display: flex;
