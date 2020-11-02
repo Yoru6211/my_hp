@@ -38,10 +38,10 @@ createToken();
         <meta charset="utf-8">
         <title>RenHattori PhotoGallery</title>
         <meta name="veiwport" content="width=device-width,initial-scale = 1"> 
-        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" type="text/css" href="./css/common.css">
         <link rel="stylesheet" type="text/css" href="./css/mobile.css">
-        <link rel="stylesheet" href="./css/pc.css">
-        <link rel="stylesheet" href="./css/tablet.css">
+        <link rel="stylesheet" type="text/css" href="./css/pc.css">
+        <link rel="stylesheet" type="text/css" href="./css/tablet.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">

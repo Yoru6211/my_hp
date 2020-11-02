@@ -1,16 +1,16 @@
-<?php 
+<!-- <?php 
 require ('../../isolation/functions.php');
 require ('personal.php');
 
 session_start();
 
 // 直接send.phpにアクセスされた場合index.phpへ戻す
-if(!isset($_SESSION['form'])){
-    header('Location: ../index.php');
-    exit();
-}else{
-    $post = $_SESSION['form'];
-}
+// if(!isset($_SESSION['form'])){
+//     header('Location: ../index.php');
+//     exit();
+// }else{
+//     $post = $_SESSION['form'];
+// }
 
 // PHPMailer読み込み
 use PHPMailer\PHPMailer\PHPMailer;
@@ -89,7 +89,7 @@ echo 'もう一度送信いただくか少しお時間をおいてから再度�
 exit();
 } 
 
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="ja">

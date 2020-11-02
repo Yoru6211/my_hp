@@ -3,12 +3,12 @@ session_start();
 require ('../../isolation/functions.php');
 
 // 直接confirm.phpにアクセスされた場合index.phpへ戻す
-if(!isset($_SESSION['form'])){
-    header('Location: ../index.php');
-    exit();
-}else{
-    $post = $_SESSION['form'];
-}
+// if(!isset($_SESSION['form'])){
+//     header('Location: ../index.php');
+//     exit();
+// }else{
+//     $post = $_SESSION['form'];
+// }
 
 // // PHPMailer読み込み
 // use PHPMailer\PHPMailer\PHPMailer;
@@ -85,7 +85,7 @@ if(!isset($_SESSION['form'])){
 //     echo 'メールの送信に失敗しました: ' . $mail->Errorinfo;
 //     } 
 // }
-?>
+// ?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -93,6 +93,8 @@ if(!isset($_SESSION['form'])){
 <meta charset="utf-8">
 <title>お問い合わせフォーム</title>
 <meta name="veiwport" content="width=device-width,initial-scale = 1"> 
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/confirm.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
@@ -100,30 +102,45 @@ if(!isset($_SESSION['form'])){
 </head>
 
 <body>
+    <div class="confirm_area">
+        <h1>お問い合わせ内容確認</h1>
+        <form action="send.php" method="POST">
+            <div class="user_info">
+                <table>
+                    <tr>
+                        <th>名前</th><td></td>
+                    </tr>
+                    <tr>
+                        <th>メール</th><td></td>
+                    </tr>
+                    <tr>
+                        <th>メッセージ</th><td></td>
+                    </tr>
+                    
 
-
-<div class="contact-form">
-                <h1>お問い合わせ内容確認 / Confirm your Name/Email/Message</h1>
-                <form class="contact-form-area" action="send.php" method="POST">
-                    <div>
-                        <label for="name">お名前 / Name :</label>
-                        <p><?php echo h($post['name']); ?></p>
-                    </div>
-                    <div>
-                        <label for="email">メールアドレス / Email :</label>
-                        <p><?php echo h($post['email']); ?></p>
-                    </div>
-                    <div>
-                    <label for="message">お問い合わせ内容 / Message :</label>
-                        <p><?php echo nl2br(h($post['message'])); ?></p>
-                    </div>
-                    <a href="../index.php">戻る</a>
-                    <button type="submit">送信する</button>
-                </form>
+                </table>
+                <label for="name">お名前 / Name :</label>
+                <p>煉獄</p>
+                <!-- <p><?php echo h($post['name']); ?></p> -->
             </div>
-            <footer>
+            <div class="user_info">
+                <label for="email">メールアドレス / Email :</label>
+                <p>test@mail.com</p>
+                <!-- <p><?php echo h($post['email']); ?></p> -->
+            </div>
+            <div class="user_info">
+                <label for="message">お問い合わせ内容 / Message :</label>
+                <p>lorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テストlorem200テスト</p>
+                <!-- <p><?php echo nl2br(h($post['message'])); ?></p> -->
+            </div>
+            <div class="buttons">
+                <a href="../index.php">戻る</a>
+                <button type="submit">送信する</button>
+            </div>
+        </form>
+    </div>
+    <footer>
         <small>© REN HATTORI PHOTO GALLARY</small>
     </footer>
-</div>
 </body>
 </html>
