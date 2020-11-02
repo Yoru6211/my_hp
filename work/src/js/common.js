@@ -1,7 +1,7 @@
 // ハンバーガーメニュー
 const menuIcon = document.getElementById('menu_icon');
 const navList = document.getElementById('nav_list');
-const menuBg = document.querySelector('.wrap_menu');
+const menuBg = document.querySelector('.menu');
 const topLink = document.getElementById('top_link');
 const secLink = document.getElementById('sec_link');
 const thiLink = document.getElementById('thi_link');
@@ -19,7 +19,7 @@ const thiLink = document.getElementById('thi_link');
             closeMenu();
         }else{
             navList.style.display = 'block';
-            // menuBg.style.display = 'block';
+            menuBg.style.display = 'block';
             menuIcon.className = 'fa fa-times';
         }
     });
@@ -44,84 +44,64 @@ const preArrow = document.getElementById('arrow_left');
 const nextArrow = document.getElementById('arrow_right');
 const imageArea = document.querySelector('.image_area');
 const slideImage = document.querySelector('.slide_image');
-// const images = [
-//     "../img/basilica.jpg",
-//     "../img/sunrise_191103.jpg",
-//     "../img/teotihuacan01_191104.jpg",
-//     "../img/teotihuacan02_191104.jpg",
-// ];
+const imageNum = document.querySelector('.image_area_number');
 
 // トップページ/画像エリアスライド切り替え
 let area01 = document.getElementById('image_area01');
 let area02 = document.getElementById('image_area02');
 let area03 = document.getElementById('image_area03');
+// let area04 = document.getElementById('image_area04');
+// let area05 = document.getElementById('image_area05');
+// let area06 = document.getElementById('image_area06');
+// let area07 = document.getElementById('image_area07');
+// let area08 = document.getElementById('image_area08');
+// let area09 = document.getElementById('image_area09');
+// let area10 = document.getElementById('image_area10');
 let imageAreas = [
     area01,
     area02,
     area03,
+    // area04,
+    // area05,
+    // area06,
+    // area07,
+    // area08,
+    // area09,
+    // area10,
 ];
 // デフォルト設定
 let currentIndex = 0;
 imageAreas[currentIndex].style.display = "block";
-imageAreas[currentIndex].classList.remove("blur");
+let lastNum = imageAreas.length;
+imageNum.innerHTML = (currentIndex + 1) + "/" + lastNum;
+
+
 
     // 次のページへ切り替え
     nextArrow.addEventListener('click', () =>{
-        // imageAreas[currentIndex].classList.add("add_blur");
-        imageAreas[currentIndex].style.display = "none";
-        currentIndex++;
-        imageAreas[currentIndex].style.display = "block";
-        imageAreas[currentIndex].classList.add("remove_blur");
-        if(currentIndex === imageAreas.length -1){
-            nextArrow.style.visibility = "hidden";
-        }else if(currentIndex > 0){
-            preArrow.style.visibility = "visible";
-        } 
+            imageAreas[currentIndex].style.display = "none";
+            currentIndex++;
+            imageAreas[currentIndex].style.display = "block";
+            imageNum.innerHTML = (currentIndex + 1) + "/" + lastNum;
+            if(currentIndex === imageAreas.length -1){
+                nextArrow.style.visibility = "hidden";
+            }else if(currentIndex > 0){
+                preArrow.style.visibility = "visible";
+            }
     });
     // 前のページへ戻る
     preArrow.addEventListener('click', () =>{
-        imageAreas[currentIndex].style.display = "none";
-        currentIndex--;
-        imageAreas[currentIndex].style.display = "block";
-        imageAreas[currentIndex].classList.add("remove_blur");
-        if(currentIndex === 0){
-            preArrow.style.visibility = "hidden";
-        }else if(currentIndex < imageAreas.length -1){
-            nextArrow.style.visibility = "visible";
-        } 
+            imageAreas[currentIndex].style.display = "none";
+            currentIndex--;
+            imageAreas[currentIndex].style.display = "block";
+            imageNum.innerHTML = (currentIndex + 1) + "/" + lastNum;
+            if(currentIndex === 0){
+                preArrow.style.visibility = "hidden";
+            }else if(currentIndex < imageAreas.length -1){
+                nextArrow.style.visibility = "visible";
+        }
     });
 
-
-
-
-
-    // // デフォルトイメージ
-    // let currentIndex = 0;
-    // slideImage.src = images[currentIndex];
-
-    // // 次へボタン
-    // nextArrow.addEventListener('click', () =>{
-    //     currentIndex++;    
-    //     slideImage.src = images[currentIndex];
-    //     if(currentIndex === images.length -1){
-    //         nextArrow.style.visibility = 'hidden';
-    //         // currentIndex = 0;
-    //     }else if(currentIndex > 0){
-    //         preArrow.style.visibility = 'visible';
-    //     }
-    //     // console.log(currentIndex);
-    // });
-    // // 戻るボタン 
-    // preArrow.addEventListener('click', () =>{
-    //     currentIndex--;
-    //     slideImage.src = images[currentIndex];
-    //     if(currentIndex === 0){
-    //         preArrow.style.visibility = 'hidden';
-    //     }else if(currentIndex < images.length){
-    //         nextArrow.style.visibility = 'visible';
-    //     }
-    //     // console.log(currentIndex);
-    // });
 
 
 // スクロールによる背景色変更

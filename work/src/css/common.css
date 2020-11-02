@@ -7,7 +7,13 @@ html{
     width: 100%;
     height: 100%;
 }
-
+.whole_area{
+    max-width: 1024px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
 h1{
     color: #ffffff;
     font-family: 'Cinzel', serif;
@@ -87,9 +93,8 @@ header h2{
     cursor: pointer;
     z-index: 200;
 }
-
 /* メニュー開いた時の背景 */
-.wrap_menu{
+.menu{
     display: none;
     position: fixed;
     width: 100%;
@@ -98,12 +103,12 @@ header h2{
     background: #6b778d;
     z-index: 50;
 }
-
 /* メニューリスト */
 #nav_list{
     display: none;
     position: fixed;
     width: 100%;
+    margin-top: 300px;
     z-index: 150;
 }
 header ul{
@@ -131,26 +136,19 @@ header li a{
 #top_area{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     position: relative;
     width: 100%;
-    height: 100vh;
     color: #ffffff;
 }
-#top_area h2{
-    align-items: left;
-    margin: 1em 1.5em;
-}
-.top_image{
-    z-index: 10;
-    align-items: center;
-    margin-top: 50px;
+.arrow{
+    height: 6em;
+    display: flex;
 }
 #arrow_left{
     visibility: hidden;
     position: absolute;
-    font-size: 9em;
-    left: 0;
+    font-size: 5em;
+    left: .4em;
     color: #6b778d;
     cursor: pointer;
     opacity: 0.5;
@@ -158,22 +156,52 @@ header li a{
 }
 #arrow_right{
     position: absolute;
-    font-size: 9em;
-    right: 0;
+    font-size: 5em;
+    right: .4em;
     color: #6b778d;
     cursor: pointer;
     opacity: 0.5;
     z-index: 20;
 }
+.image_area_number{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    font-size: 2em;
+}
+#top_area h2{
+    align-items: left;
+    margin: 1em 1.5em;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.top_image{
+    z-index: 10;
+    align-items: center;
+    margin-top: 50px;
+}
 #top_area ul{
     list-style-type: none;
     margin-top: 0;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 #top_area li{
     font-size: 2em;
     line-height: 200%;
 }
 /* 画像エリア */
+.slider{
+    width: 100％;
+    max-height:800px;
+    margin-top: calc(150px + 150px);
+    text-align: center;
+}
+.slider img{
+    max-width: 1000px;
+    max-height: 800px;
+}
+.slider h2,ul{
+    text-align: left;
+}
 #image_area01{
     display: none;
 }
@@ -183,32 +211,29 @@ header li a{
 #image_area03{
     display: none;
 }
-.remove_blur{
-    filter: blur(0);
-    animation-name: removeblur;
-    animation-duration: 2s;
+/* #image_area04{
+    display: none;
 }
-@keyframes removeblur{
-    0%{
-        filter: blur(10px);
-    }
-    100%{
-        filter: blur(0);
-    }
+#image_area05{
+    display: none;
 }
-.add_blur{
-    filter: blur(10px);
-    animation-name: addblur;
-    animation-duration: 2s;
+#image_area06{
+    display: none;
 }
-@keyframes addblur{
-    0%{
-        filter: blur(0);
-    }
-    100%{
-        filter: blur(10px);
-    }
+#image_area07{
+    display: none;
 }
+#image_area08{
+    display: none;
+}
+#image_area09{
+    display: none;
+}
+#image_area10{
+    display: none;
+} */
+
+
 
 
 
@@ -219,10 +244,19 @@ header li a{
 /* プロフィール_2ページ目 */
 #sec_area{
     width: 100%;
-    height: 100vh;
     position: relative;
+    display:flex;
+    text-align: center;
 }
-.profile_position{
+.fa-moon{
+    color: #ffffff;
+    font-size: 3em;
+    margin: 0 auto;
+}
+#moon{
+    font-size: 3em;
+}
+.profile{
     position: absolute;
     width: 100%;
     margin: 0 auto;
@@ -238,7 +272,8 @@ header li a{
     /* text-align: center; */
     color: #ffffff;
     padding-left: 2em;
-
+    font-family: 'Cinzel', serif;
+    text-align: left;
 }
 .profile_text_wrapper{
     text-align: center;
@@ -257,12 +292,17 @@ header li a{
 /* お問い合わせ_3ページ目 */
 #thi_area{
     width: 100%;
-    height: 100vh;
     position: relative;
+    display:flex;
+    text-align: center;
+}
+#moon_y{
+    color: yellow;
 }
 .contact_form{
     position: absolute;
     width: 80%;
+    text-align: center;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -295,7 +335,7 @@ header li a{
     margin: 20px 0;
 }
 .contact_form_area p{
-    color: yellow;
+    color: #ffff00;
     margin-top: 0;
     text-align: left;   
 }
@@ -339,6 +379,3 @@ footer{
     bottom: 0;   
     z-index: 150; 
 }
-
-
-
