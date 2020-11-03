@@ -250,12 +250,11 @@ header li a{
     text-align: center;
 }
 .fa-moon{
-    color: #ffffff;
     font-size: 3em;
     margin: 0 auto;
 }
 #moon{
-    font-size: 3em;
+    color: #ffff00;
 }
 .profile{
     position: absolute;
@@ -298,7 +297,7 @@ header li a{
     text-align: center;
 }
 #moon_y{
-    color: yellow;
+    color: #ffffff;
 }
 .contact_form{
     position: absolute;
@@ -335,13 +334,17 @@ header li a{
 .contact_form_area textarea{
     margin: 20px 0;
 }
-.contact_form_area p{
+.warning{
     color: #ffff00;
     margin-top: 0;
     text-align: left;   
 }
 .input_area{
     margin-top: 10px;
+}
+.notice{
+    color: #ffffff;
+    text-align: left;
 }
 .contact_form button{
     display: block;

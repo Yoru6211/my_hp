@@ -244,26 +244,29 @@ createToken();
                                     <label for="name">お名前 / Name :</label>
                                     <input id="name" type="text" name="name" value="<?php echo h($post['name']); ?>" required>
                                     <?php if ($error['name'] === 'blank'): ?>
-                                        <p>*お名前を入力してください</p>
+                                        <p class="warning">*お名前を入力してください</p>
                                     <?php endif; ?>
                                 </div>
                                 <div class="input_area">
                                     <label for="email">メールアドレス / Email :</label>
                                     <input id="email" type="mail" name="email" value="<?php echo h($post['email']); ?>" required>
                                     <?php if ($error['email'] === 'blank'): ?>
-                                        <p>*Emailアドレスを入力してください</p>
+                                        <p class="warning">*Emailアドレスを入力してください</p>
                                     <?php endif; ?>
                                     <?php if ($error['email'] === 'email'): ?>
-                                        <p>*Emailアドレスを正しく入力してください</p>
+                                        <p class="warning">*Emailアドレスを正しく入力してください</p>
                                     <?php endif; ?>
                                 </div>
                                 <div class="input_area">
                                     <label for="message">お問い合わせ内容 / Message :</label>
                                     <textarea id="message" name="message" cols="20" rows="4" maxlength="20" required><?php echo h($post['message']); ?></textarea>
                                     <?php if ($error['message'] === 'blank'): ?>
-                                        <p>*お問い合わせ内容を入力してください</p>
+                                        <p class="warning">*お問い合わせ内容を入力してください</p>
                                     <?php endif; ?>
                                 </div>
+                                <p class="notice">*返信させていただくまでに数日お待ちいただく場合もございます。
+                                <br>*お問い合わせ内容によっては返信できない場合もございますので、ご了承ください。
+                                </p>
                                 <button type="submit">確認画面へ</button>
                                 <input type="hidden" name="token" value="<?php echo h($_SESSION['token']); ?>">
                             </form>

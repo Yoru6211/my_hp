@@ -1,16 +1,18 @@
-<!-- <?php 
+<?php 
+session_start();
 require ('../../isolation/functions.php');
 require ('personal.php');
 
-session_start();
 
 // 直接send.phpにアクセスされた場合index.phpへ戻す
-// if(!isset($_SESSION['form'])){
-//     header('Location: ../index.php');
-//     exit();
-// }else{
-//     $post = $_SESSION['form'];
-// }
+if(!isset($_SESSION['form'])){
+    header('Location: ../index.php');
+    exit();
+}else{
+    $post = $_SESSION['form'];
+}
+
+
 
 // PHPMailer読み込み
 use PHPMailer\PHPMailer\PHPMailer;
@@ -89,14 +91,15 @@ echo 'もう一度送信いただくか少しお時間をおいてから再度�
 exit();
 } 
 
-?> -->
+?> 
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>お問い合わせフォーム</title>
+<title>送信完了</title>
 <meta name="veiwport" content="width=device-width,initial-scale = 1"> 
+<link rel="stylesheet" type="text/css" href="../css/send.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
@@ -104,8 +107,15 @@ exit();
 </head>
 
 <body>
-    <h1>お問い合わせの送信が完了いたしました</h1>      
-    <a href="../index.php">トップページへ戻る</a>       
+    <main>
+        <div class="send">
+            <h1>お問い合わせありがとうございます。送信が完了いたしました。</h1>
+            <p>*返信させていただくまでに数日お待ちいただく場合もございます。
+            <br>*お問い合わせ内容によっては返信できない場合もございますので、ご了承ください。
+            </p>
+            <a href="../index.php">トップページへ戻る</a>       
+        </div>
+    <main>
     <footer>
         <small>© REN HATTORI PHOTO GALLARY</small>
     </footer>
