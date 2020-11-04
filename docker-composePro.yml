@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+    
+    web:
+        build: ./web
+        ports:
+            - '8080:80'
+        volumes:
+            - '.:/my_hp'
+            - './work/src:/my_hp/work/src'
+            - './web/default.conf:/etc/nginx/conf.d/default.conf'
+            - './web/nginx.conf:/etc/nginx/nginx.conf'
+        tty: true
+        stdin_open: true
+        networks:
+            my_hp_net:
+                ipv4_address: 192.168.0.2      
+            
+                    
+    app:
+        build: ./app
+        volumes:
+            - '.:/my_hp'
+            - './work/src:/my_hp/work/src'
+        tty: true
+        stdin_open: true
+        networks:
+            my_hp_net:
+                ipv4_address: 192.168.0.4
+
+    composer:
+        image: composer:latest
+        command: install
+        restart: 'no'
+        volumes:
+            - ./app:/app
+
+networks:
+    my_hp_net:
+        name: my_hp_net
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 192.168.0.0/24
+
+
+volumes:
+    my_db:
+
+
+        
