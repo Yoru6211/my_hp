@@ -15,26 +15,27 @@ services:
         stdin_open: true
         networks:
             my_hp_net:
-                ipv4_address: 192.168.0.3      
+                ipv4_address: 192.168.0.2      
         
 
     db:
         image: mysql:8.0.21
-        # env_file: ./mysql/db.env
         environment:
             MYSQL_ROOT_PASSWORD: '98765'
             MYSQL_DATABASE: 'my_hp_db'
             MYSQL_USER: 'yoru'
             MYSQL_PSSSWORD: '12345'
+            TZ: Asia/Tokyo
         volumes:
             - 'my_db:/var/lib/mysql'
+            - './mysql/charset:/etc/mysql/conf.d/charset/'
         ports:
             - '3306:3306'
         command: mysqld --character-set-server=utf8mb4
                 --collation-server=utf8mb4_unicode_ci
         networks:
             my_hp_net:
-                ipv4_address: 192.168.0.4       
+                ipv4_address: 192.168.0.3       
                     
     app:
         build: ./app
@@ -45,7 +46,7 @@ services:
         stdin_open: true
         networks:
             my_hp_net:
-                ipv4_address: 192.168.0.5
+                ipv4_address: 192.168.0.4
 
     composer:
         image: composer:latest
