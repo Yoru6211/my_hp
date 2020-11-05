@@ -23,7 +23,7 @@ use PHPMailer\PHPMailer\Exception;
 
  // データベースへお問い合わせ情報を保存
  try{
-    $db = new PDO('mysql:dbname=my_hp_db;host=192.168.0.3;charset=utf8', 'root', '98765');
+    $db = new PDO('mysql:dbname=my_hp_db;host=192.168.0.13;charset=utf8', 'root', '98765');
 }catch(PDOException $e){
     echo 'データベースに接続できませんでした' . $e->getMessage();
 }

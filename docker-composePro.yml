@@ -15,7 +15,7 @@ services:
         stdin_open: true
         networks:
             my_hp_net:
-                ipv4_address: 192.168.0.2      
+                ipv4_address: 192.168.0.11      
             
                     
     app:
@@ -27,7 +27,7 @@ services:
         stdin_open: true
         networks:
             my_hp_net:
-                ipv4_address: 192.168.0.4
+                ipv4_address: 192.168.0.12
 
     composer:
         image: composer:latest
