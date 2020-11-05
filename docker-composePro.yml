@@ -5,7 +5,7 @@ services:
     web:
         build: ./web
         ports:
-            - '8080:80'
+            - '80:80'
         volumes:
             - '.:/my_hp'
             - './work/src:/my_hp/work/src'
