@@ -1,0 +1,386 @@
+/* font-family: 'Cinzel', serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Noto Sans JP', sans-serif; */
+
+/* ページ全体 */
+html{
+    width: 100%;
+    height: 100%;
+}
+.whole_area{
+    max-width: 1024px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+h1{
+    color: #ffffff;
+    font-family: 'Cinzel', serif;
+    font-size: 3em;
+}
+
+h2{
+    color: #ffffff;
+    font-size: 2em;
+}
+
+p{
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+
+/* body */
+body{
+    font-family:'Lato' , sans-serif  ;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+}
+
+/* 背景色 */
+.default_bg{
+    width: 100%;
+    height: 100%;
+}
+.top_area_bg{
+    background: #000000;
+    transition: 1s ease-in;
+}
+.sec_area_bg{
+    background: #00818A;
+    transition: 1s ease-in;
+}
+.thi_area_bg{
+    background: #6C49B8;
+    transition: 1s ease-in;
+}
+
+/* ヘッダー */
+header{
+    width: 100%;
+}
+.site_name{
+    position: fixed;
+    z-index: 150;
+}
+header h1{
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0.5em 0 0 0.5em;
+    text-align: left;
+}
+header h2{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    top: 90px;
+    padding: 0 0 0 0.5em;
+}
+
+
+
+
+
+/* ハンバーガーメニューアイコン */
+#menu_icon{
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    color: #ffffff;
+    font-size: 4em;
+    cursor: pointer;
+    z-index: 200;
+}
+/* メニュー開いた時の背景 */
+.menu{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background: #6b778d;
+    z-index: 50;
+}
+/* メニューリスト */
+#nav_list{
+    display: none;
+    position: fixed;
+    width: 100%;
+    margin-top: 300px;
+    z-index: 150;
+}
+header ul{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 100px 0 0 0;
+}
+header li{
+    font-size: 4em;
+    padding: 50px;
+}
+header li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+
+
+/* トップページ */
+#top_area{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    color: #ffffff;
+}
+.arrow{
+    height: 6em;
+    display: flex;
+}
+#arrow_left{
+    visibility: hidden;
+    position: absolute;
+    font-size: 5em;
+    left: .4em;
+    color: #6b778d;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 20;
+}
+#arrow_right{
+    position: absolute;
+    font-size: 5em;
+    right: .4em;
+    color: #6b778d;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 20;
+}
+.image_area_number{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    font-size: 2em;
+}
+#top_area h2{
+    align-items: left;
+    margin: 1em 1.5em;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.top_image{
+    z-index: 10;
+    align-items: center;
+    margin-top: 50px;
+}
+#top_area ul{
+    list-style-type: none;
+    margin-top: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+#top_area li{
+    font-size: 2em;
+    line-height: 200%;
+}
+/* 画像エリア */
+.slider{
+    width: 100％;
+    max-height:800px;
+    margin-top: calc(150px + 150px);
+    text-align: center;
+}
+.slider img{
+    max-width: 1000px;
+    max-height: 800px;
+}
+.slider h2,ul{
+    text-align: left;
+}
+#image_area01{
+    display: none;
+}
+#image_area02{
+    display: none;
+}
+#image_area03{
+    display: none;
+}
+/* #image_area04{
+    display: none;
+}
+#image_area05{
+    display: none;
+}
+#image_area06{
+    display: none;
+}
+#image_area07{
+    display: none;
+}
+#image_area08{
+    display: none;
+}
+#image_area09{
+    display: none;
+}
+#image_area10{
+    display: none;
+} */
+
+
+
+
+
+
+
+
+
+/* プロフィール_2ページ目 */
+#sec_area{
+    width: 100%;
+    position: relative;
+    display:flex;
+    text-align: center;
+}
+.fa-moon{
+    font-size: 3em;
+    margin: 0 auto;
+}
+#moon{
+    color: #ffff00;
+}
+.profile{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+#sec_area h1{
+    text-align: center;
+    margin-bottom: 80px;
+}
+#sec_area h2{
+    /* text-align: center; */
+    color: #ffffff;
+    padding-left: 2em;
+    font-family: 'Cinzel', serif;
+    text-align: left;
+}
+.profile_text_wrapper{
+    text-align: center;
+}
+#sec_area p{
+    display: inline-block;
+    text-align: left;
+    font-size: 1.8em;
+    line-height: 200%;
+    padding: 0 2em;
+}
+
+
+
+
+/* お問い合わせ_3ページ目 */
+#thi_area{
+    width: 100%;
+    position: relative;
+    display:flex;
+    text-align: center;
+}
+#moon_y{
+    color: #ffffff;
+}
+.contact_form{
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+#thi_area h1{
+    text-align: center;
+    margin-bottom: 80px;
+}
+#name{
+    width: 100%;
+    height: 4em;
+}
+#email{
+    width: 100%;
+    height: 4em;
+}
+#message{
+    width: 100%;
+    height: 12em;
+}
+.contact_form_area label{
+    color: #ffffff;
+    font-size: 2em;   
+}
+.contact_form_area input{
+    margin: 20px 0;
+}
+.contact_form_area textarea{
+    margin: 20px 0;
+}
+.warning{
+    color: #ffff00;
+    margin-top: 0;
+    text-align: left;   
+}
+.input_area{
+    margin-top: 10px;
+}
+.notice{
+    color: #ffffff;
+    text-align: left;
+}
+.contact_form button{
+    display: block;
+    font-size: 2em;
+    padding: 10px;
+    margin: 50px auto;
+    width: 30%;
+    height: 3em;
+    text-align: center;
+    background: #379392;
+    color: #ffffff;
+    box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.3);
+    outline: none;
+    border: none;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.contact_form button:hover{
+    opacity: 1.0;
+}
+.contact_form button:active{
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+    transform: translateY(2px);
+}
+
+
+/* フッター */
+footer{    
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 2em;
+    background: #817F7F;
+    bottom: 0;   
+    z-index: 150; 
+}

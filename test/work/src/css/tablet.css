@@ -1,0 +1,13 @@
+@media screen and (min-device-width: 481px) and (max-device-width: 896px){
+    #top_area{
+        height: 140vh;
+    }
+
+    #sec_area{
+        height: 140vh;
+    }
+
+    #thi_area{
+        height: 140vh;
+    }
+}

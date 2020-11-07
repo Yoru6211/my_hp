@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require ('../../isolation/functions.php');
-require ('personal.php');
+require ('../../isolateion/personal.php');
 
 
 // 直接send.phpにアクセスされた場合index.phpへ戻す
@@ -23,7 +23,7 @@ use PHPMailer\PHPMailer\Exception;
 
  // データベースへお問い合わせ情報を保存
  try{
-    $db = new PDO('mysql:dbname=my_hp_db;host=localhost;charset=utf8mb4', 'root');
+    $db = new PDO($dsn, $db_user,$db_passwd);
 }catch(PDOException $e){
     echo 'データベースに接続できませんでした' . $e->getMessage();
 }
