@@ -23,18 +23,18 @@ use PHPMailer\PHPMailer\Exception;
 
  // データベースへお問い合わせ情報を保存
  try{
-    $db = new PDO($dsn, $db_user,$db_passwd);
+    $db = new PDO('mysql:dbname=my_hp_db;host=localhost;charset=utf8mb4', 'root');
 }catch(PDOException $e){
+    $sql = "INSERT INTO contact (name, email, message, created) VALUES(:name, :email, :message, now())";
+    
+    $stmt = $db->prepare($sql);
+    
+    $params = array(':name' => $post['name'], ':email' => $post['email'], ':message' => $post['message']);
+    
+    $stmt->execute($params);
     echo 'データベースに接続できませんでした' . $e->getMessage();
 }
 
-$sql = "INSERT INTO contact (name, email, message, created) VALUES(:name, :email, :message, now())";
-
-$stmt = $db->prepare($sql);
-
-$params = array(':name' => $post['name'], ':email' => $post['email'], ':message' => $post['message']);
-
-$stmt->execute($params);
 
 
 // PHPMailer
