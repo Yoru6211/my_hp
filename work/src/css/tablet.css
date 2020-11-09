@@ -1,13 +1,16 @@
 @media screen and (min-device-width: 481px) and (max-device-width: 896px){
+    /* トップページ/1ページ目 */
     #top_area{
         height: 140vh;
     }
-
+    /* プロフィールページ/2ページ目 */
     #sec_area{
         height: 140vh;
     }
-
+    /* お問い合わせページ/3ページ目 */
     #thi_area{
         height: 140vh;
     }
+
+
 }

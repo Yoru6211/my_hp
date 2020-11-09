@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require ('../../isolation/functions.php');
-require ('personal.php');
+require ('../../isolation/personal.php');
 
 
 // 直接send.phpにアクセスされた場合index.phpへ戻す
@@ -23,8 +23,7 @@ use PHPMailer\PHPMailer\Exception;
 
  // データベースへお問い合わせ情報を保存
  try{
-    $db = new PDO('mysql:dbname=my_hp_db;host=localhost;charset=utf8mb4', 'root');
-}catch(PDOException $e){
+    $db = new PDO($dsn,$db_user,$db_passwd);
     $sql = "INSERT INTO contact (name, email, message, created) VALUES(:name, :email, :message, now())";
     
     $stmt = $db->prepare($sql);
@@ -32,6 +31,7 @@ use PHPMailer\PHPMailer\Exception;
     $params = array(':name' => $post['name'], ':email' => $post['email'], ':message' => $post['message']);
     
     $stmt->execute($params);
+}catch(PDOException $e){
     echo 'データベースに接続できませんでした' . $e->getMessage();
 }
 

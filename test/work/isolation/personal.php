@@ -1,8 +1,8 @@
 <?php
 // mysql
-$dsn = 'mysql:dbname=my_hp_db;host=localhost;charset=utf8mb4';
+$dsn = 'mysql:dbname=my_hp_db;host=192.168.0.13;charset=utf8mb4';
 $db_user = 'root';
-$db_passwd = 'hi-qiVf96CLn';
+$db_passwd = '98765';
 
 // gmail/smtpサーバー
 $my_account = 'yoru.mikazuki001@gmail.com';

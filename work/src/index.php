@@ -48,27 +48,28 @@ createToken();
 
     </head>
     <body>
-        <div class="default_bg">
-            
+        <div class="default_bg">      
             <header>
                 <div class="menu">
-                    </div>
-                    <div class="site_name">
-                        <h1>REN HATTORI <br>　PHOTO GALLARY</h1>
+                </div>
+                    <!-- <div class="site_name"> -->
+                        <i id="menu_icon" class="fas fa-bars"></i>
+                        <nav id="nav_list">
+                            <ul>
+                                <li><a id="top_link" href="#top_area">トップページ<br>Top</a></li>
+                                <li><a id="sec_link" href="#sec_area">プロフィール<br>Profile</a></li>
+                                <li><a id="thi_link" href="#thi_area">お問い合わせ<br>Contact</a></li>
+                            </ul>
+                        </nav>
+                        <h1>REN HATTORI <br>&emsp;PHOTO GALLARY</h1>
                         <h2>#刻のしおり</h2>
-                    </div>    
-                    <i id="menu_icon" class="fas fa-bars"></i>
-                    <nav id="nav_list">
-                        <ul>
-                            <li><a id="top_link" href="#top_area">トップページ<br>Top</a></li>
-                            <li><a id="sec_link" href="#sec_area">プロフィール<br>Profile</a></li>
-                            <li><a id="thi_link" href="#thi_area">お問い合わせ<br>Contact</a></li>
-                        </ul>
-                    </nav>
-                </header>
+                    <!-- </div>     -->
+            </header>
             <div class="whole_area">
                 <main>
+                    <!-- トップページ/1ページ目 -->
                     <section id="top_area">
+                        <!-- 画像スライド -->
                         <div class="slider">
                             <div class="arrow">
                                 <i id="arrow_left" class="fas fa-angle-double-left"></i>
@@ -227,14 +228,16 @@ createToken();
                             </div> -->
                         </div>
                     </section>
+                    <!-- プロフィールページ/2ページ目 -->
                     <section id="sec_area">
-                        <i class="fas fa-moon"></i>
+                        <i id="moon" class="fas fa-moon"></i>
                         <div class="profile">
                             <h1>プロフィール / Profile</h1>
                         <h2>REN HATTORI</h2>
                         <div class="profile_text_wrapper">
                         <p>1986年生まれ<br>愛知県豊橋市出身、同県豊川市在住<br>21歳の頃１年間フィージとオーストラリアに語学留学＆ワーキングホリデーを使用して生活<br>その後30歳まで8年間テニスインストラクターとしてテニススクールへ勤務<br>趣味のカメラで撮影した写真を当サイトにて公開しております<br><br>Born in 1986<br>From Toyohashi,Aichi,Japan<br>Live in Toyokawa<br>Stayed Fiji and Australia for a year Since 21-years-old<br>Worked for Tennis Instructor for 8 years until 30-years-old<br>Release my photos that took as my hobby at this Website</p>
                     </section>
+                    <!-- お問い合わせページ/3ページ目 -->
                     <section id="thi_area">
                     <i id="moon_y"class="fas fa-moon"></i>
                         <div class="contact_form">

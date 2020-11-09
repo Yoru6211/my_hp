@@ -28,7 +28,6 @@ services:
             TZ: Asia/Tokyo
         volumes:
             - 'my_db:/var/lib/mysql'
-            - './mysql/charset:/etc/mysql/conf.d/charset/'
         ports:
             - '3306:3306'
         command: mysqld --character-set-server=utf8mb4
