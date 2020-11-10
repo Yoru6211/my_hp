@@ -63,7 +63,7 @@
 }
 .contact_form button{
     font-size: .5em;
-    height: 2em;
+    height: 3em;
 }
 #name{
     height: 3em;
@@ -81,8 +81,6 @@
 footer{
     height: 30px;
     font-size: .5em;
-}
-
 }
 
 }
