@@ -206,8 +206,8 @@ header li a{
     text-align: center;
 }
 .slider img{
-    max-width: 700px;
-    max-height: 500px;
+    max-width: 100%;
+    max-height: 800px;
 }
 .slider h2,ul{
     text-align: left;
@@ -362,7 +362,7 @@ header li a{
     padding: 10px;
     margin: 50px auto;
     width: 30%;
-    height: 4em;
+    height: 3em;
     text-align: center;
     background: #379392;
     color: #ffffff;
