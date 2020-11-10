@@ -5,10 +5,10 @@ services:
     web:
         build: ./web
         ports:
-            - '8889:80'
+            - '8080:80'
         volumes:
-            - '.:/test'
-            - './work/src:/test/work/src'
+            - '.:/my_hp'
+            - './work/src:/my_hp/work/src'
             - './web/default.conf:/etc/nginx/conf.d/default.conf'
             - './web/nginx.conf:/etc/nginx/nginx.conf'
         tty: true
@@ -28,7 +28,6 @@ services:
             TZ: Asia/Tokyo
         volumes:
             - 'my_db:/var/lib/mysql'
-            # - './mysql/my.cnf:/etc/mysql/my.cnf'
         ports:
             - '3306:3306'
         command: mysqld --character-set-server=utf8mb4
@@ -40,8 +39,8 @@ services:
     app:
         build: ./app
         volumes:
-            - '.:/test'
-            - './work/src:/test/work/src'
+            - '.:/my_hp'
+            - './work/src:/my_hp/work/src'
         tty: true
         stdin_open: true
         networks:
