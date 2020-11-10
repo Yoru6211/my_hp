@@ -9,6 +9,7 @@ html{
 }
 .whole_area{
     max-width: 1024px;
+    height: 100%;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -142,10 +143,11 @@ header li a{
 
 /* トップページ */
 #top_area{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    position: relative;
+    position: relative; */
     width: 100%;
+    height: auto;
     color: #ffffff;
 }
 .arrow{
@@ -199,7 +201,7 @@ header li a{
 /* 画像エリア */
 .slider{
     width: 100％;
-    max-height:500px;
+    height: auto;
     margin-top: calc(150px + 150px);
     text-align: center;
 }
@@ -209,9 +211,6 @@ header li a{
 }
 .slider h2,ul{
     text-align: left;
-}
-#image_area01{
-    display: none;
 }
 #image_area02{
     display: none;
@@ -244,7 +243,19 @@ header li a{
 
 
 
+/* 月アイコン */
+.fa-moon{
+    font-size: 3em;
+}
+#moon{
+    color: #ffffff;
+    margin: 300px 0;
+}
 
+#moon_y{
+    color: #ffff00;
+    margin: 300px 0;
+}
 
 
 
@@ -252,24 +263,18 @@ header li a{
 /* プロフィール_2ページ目 */
 #sec_area{
     width: 100%;
-    position: relative;
+    height: 100%;
+    /* position: relative;
     display:flex;
-    text-align: center;
-}
-.fa-moon{
-    font-size: 3em;
-    margin: 0 auto;
-}
-#moon{
-    color: #ffffff;
+    text-align: center; */
 }
 .profile{
-    position: absolute;
+    position:relative;
     width: 100%;
     margin: 0 auto;
-    top: 50%;
+    /* top: 50%;
     transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%); */
 }
 #sec_area h1{
     text-align: center;
@@ -278,7 +283,6 @@ header li a{
 #sec_area h2{
     font-size: 1.5em;
     font-family: 'Cinzel', serif;
-
 }
 .profile_text_wrapper{
     text-align: center;
@@ -299,21 +303,20 @@ header li a{
 /* お問い合わせ_3ページ目 */
 #thi_area{
     width: 100%;
-    position: relative;
+    height: 100%;
+    margin-bottom: 400px;
+    /* position: relative;
     display:flex;
-    text-align: center;
-}
-#moon_y{
-    color: #ffff00;
+    text-align: center; */
 }
 .contact_form{
-    position: absolute;
+    position: relative;
     width: 80%;
-    text-align: center;
-    top:50%;
+    margin: 0 auto;
+    /* top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%); */
 }
 #thi_area h1{
     text-align: center;

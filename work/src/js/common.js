@@ -71,7 +71,7 @@ let imageAreas = [
 ];
 // デフォルト設定
 let currentIndex = 0;
-imageAreas[currentIndex].style.display = "block";
+// imageAreas[currentIndex].style.display = "block";
 let lastNum = imageAreas.length;
 imageNum.innerHTML = (currentIndex + 1) + "/" + lastNum;
 

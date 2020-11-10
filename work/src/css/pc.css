@@ -30,7 +30,7 @@
     }
     #nav_list{
         max-width: 1024px;
-        font-size: .8em;
+        font-size: .5em;
         margin-top: 200px;
     }
     header ul{
@@ -39,19 +39,28 @@
 
 
 
+    /* 月アイコン */
+    .fa-moon{
+        font-size: 3em;
+    }
+    #moon{
+        color: #ffffff;
+        margin: 200px 0;
+    }
+
+    #moon_y{
+        color: #ffff00;
+        margin: 200px 0;
+    }
 
 
     /* トップページ/1ページ目 */
-    #top_area{
-        height: 180vh;
-    }
-    .slider{
-        max-height: 500px;
-    }
-    .slider img{
+
+
+    /* .slider img{
     max-width: 700px;
     max-height: 500px;
-}
+} */
     #top_area li{
         font-size: 1.5em;
     }
@@ -74,8 +83,9 @@
 
 
     /* プロフィールページ/2ページ目 */
-    #sec_area{
-        height: 180vh;
+    #sec_area h2{
+        font-size: 1.7em;
+        margin-bottom: 60px;
     }
     #sec_area p{
         font-size: 1.5em;
@@ -86,14 +96,12 @@
 
 
     /* お問い合わせページ/3ページ目 */
-    #thi_area{
-        height: 180vh;
-    }
     .contact_form_area label{
         font-size: 1.5em;
     }
     .contact_form button{
         font-size: 1em;
+        height: 3em;
     }
     #name{
         height: 3em;
@@ -113,69 +121,4 @@
         font-size: 1em;
     }
 
-
-
-
-    /* safari用 */
-    _::-webkit-full-page-media, _:future, :root
-
-    /* 全体文字大きさ */
-    h1{
-        font-size: 1.5em;
-    }
-    h2{
-        font-size: 1em;
-    }
-    p{
-        font-size: .5em;
-    }
-
-
-
-    /* ハンバーガーメニュー */
-    #menu_icon{
-        font-size: 2.5em;
-    }
-    #nav_list{
-        font-size: .4em;
-    }
-
-
-    /* トップページ/1ページ目 */
-    #top_area li{
-        font-size: 1em;    
-    }
-    .arrow{
-        height: 3.5em;
-    }
-    #arrow_left{
-        font-size: 2.5em;
-        left: 2.5em;
-    }
-    #arrow_right{
-        font-size: 2.5em;
-        right: 2.5em;
-    }
-    .image_area_number{
-        font-size: 1em;
-    }
-
-
-
-      /* プロフィールページ/2ページ目 */
-    #sec_area p{
-        font-size: 1em;
-    }
-
-
-
-    /* お問い合わせページ/3ページ目 */
-    .contact_form_area label{
-        font-size: 1em;
-    }
-    .contact_form button{
-        font-size: .8em;
-        height: 3em;
-    }
-    
 }
