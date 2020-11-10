@@ -68,7 +68,7 @@ createToken();
             <div class="whole_area">
                 <main>
                     <!-- トップページ/1ページ目 -->
-                    <section id="top_area">
+                    <div id="top_area">
                         <!-- 画像スライド -->
                         <div class="slider">
                             <div class="arrow">
@@ -227,19 +227,23 @@ createToken();
                                 </ul>
                             </div> -->
                         </div>
-                    </section>
+                    </div>
+                    
+                    <i id="moon" class="fas fa-moon"></i>
                     <!-- プロフィールページ/2ページ目 -->
-                    <section id="sec_area">
-                        <i id="moon" class="fas fa-moon"></i>
+                    <div id="sec_area">
                         <div class="profile">
                             <h1>プロフィール / Profile</h1>
-                        <h2>REN HATTORI</h2>
-                        <div class="profile_text_wrapper">
-                        <p>1986年生まれ<br>愛知県豊橋市出身、同県豊川市在住<br>21歳の頃１年間フィージとオーストラリアに語学留学＆ワーキングホリデーを使用して生活<br>その後30歳まで8年間テニスインストラクターとしてテニススクールへ勤務<br>趣味のカメラで撮影した写真を当サイトにて公開しております<br><br>Born in 1986<br>From Toyohashi,Aichi,Japan<br>Live in Toyokawa<br>Stayed Fiji and Australia for a year Since 21-years-old<br>Worked for Tennis Instructor for 8 years until 30-years-old<br>Release my photos that took as my hobby at this Website</p>
-                    </section>
-                    <!-- お問い合わせページ/3ページ目 -->
-                    <section id="thi_area">
+                            <h2>REN HATTORI</h2>
+                            <div class="profile_text_wrapper">
+                            <p>1986年生まれ<br>愛知県豊橋市出身、同県豊川市在住<br>21歳の頃１年間フィージとオーストラリアに語学留学＆ワーキングホリデーを使用して生活<br>その後30歳まで8年間テニスインストラクターとしてテニススクールへ勤務<br>趣味のカメラで撮影した写真を当サイトにて公開しております<br><br>Born in 1986<br>From Toyohashi,Aichi,Japan<br>Live in Toyokawa<br>Stayed Fiji and Australia for a year Since 21-years-old<br>Worked for Tennis Instructor for 8 years until 30-years-old<br>Release my photos that took as my hobby at this Website</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <i id="moon_y"class="fas fa-moon"></i>
+                    <!-- お問い合わせページ/3ページ目 -->
+                    <div id="thi_area">
                         <div class="contact_form">
                             <h1>お問い合わせ / Contact</h1>
                             <form class="contact_form_area" action="" method="POST" novalidate>
@@ -274,7 +278,7 @@ createToken();
                                 <input type="hidden" name="token" value="<?php echo h($_SESSION['token']); ?>">
                             </form>
                         </div>
-                    </section>
+                    </div>
                 </main>
             </div>
             <footer>
