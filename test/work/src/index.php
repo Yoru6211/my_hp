@@ -39,7 +39,6 @@ createToken();
         <title>RenHattori PhotoGallery</title>
         <meta name="veiwport" content="width=device-width,initial-scale = 1"> 
         <link rel="stylesheet" type="text/css" href="./css/common.css">
-        <link rel="stylesheet" type="text/css" href="./css/mobile.css">
         <link rel="stylesheet" type="text/css" href="./css/pc.css">
         <link rel="stylesheet" type="text/css" href="./css/tablet.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -50,51 +49,52 @@ createToken();
     <body>
         <div class="default_bg">      
             <header>
-                <div class="menu">
-                </div>
-                    <!-- <div class="site_name"> -->
-                        <i id="menu_icon" class="fas fa-bars"></i>
-                        <nav id="nav_list">
-                            <ul>
-                                <li><a id="top_link" href="#top_area">トップページ<br>Top</a></li>
-                                <li><a id="sec_link" href="#sec_area">プロフィール<br>Profile</a></li>
-                                <li><a id="thi_link" href="#thi_area">お問い合わせ<br>Contact</a></li>
-                            </ul>
-                        </nav>
+                <i id="menu_icon" class="fas fa-bars"></i>
+                    <nav id="nav_list">
+                        <ul>
+                            <li><a id="top_link" href="#top_area">トップページ/Top</a></li>
+                            <li><a id="sec_link" href="#sec_area">プロフィール/Profile</a></li>
+                            <li><a id="thi_link" href="#thi_area">お問い合わせ/Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="site_name">
                         <h1>REN HATTORI <br>&emsp;PHOTO GALLARY</h1>
                         <h2>#刻のしおり</h2>
-                    <!-- </div>     -->
+                    </div>
             </header>
+
             <div class="whole_area">
+
                 <main>
                     <!-- トップページ/1ページ目 -->
                     <div id="top_area">
                         <!-- 画像スライド -->
                         <div class="slider">
+                            <!-- アローボタン -->
                             <div class="arrow">
                                 <i id="arrow_left" class="fas fa-angle-double-left"></i>
                                 <i id="arrow_right" class="fas fa-angle-double-right"></i>
                                 <p class="image_area_number"></p>
                             </div>
-                                <!-- １枚目 -->
-                                <div id="image_area01">
-                                    <img  class="slide_image" src="../img/basilica_191104.jpg" width="auto" height="100%" alt="メトロポリタン大聖堂">
-                                    <h2>メトロポリタン大聖堂 / メキシコ / メキシコシティ </h2>
-                                    <ul>
-                                        <li>機種： <span>NIKON/D7500</span></li>
-                                        <li>焦点距離：<span>36mm</span></li>
-                                        <li>撮影モード：<span>絞り優先モード</span></li>
-                                        <li>絞り：<span>F8.0</span></li>
-                                        <li>シャッタースピード：<span>1/400秒</span></li>
-                                        <li>ISO感度：<span>400</span></li>
-                                        <li>露出補正：<span>0</span></li>
-                                        <li>ホワイトバランス：<span>太陽光</span></li>
-                                    </ul>
-                                </div>
-                                <!-- ２枚目 -->
-                                <div id="image_area02">
-                                    <img  class="slide_image" src="../img/teotihuacan01_191104.jpg" width="100%" height="auto" alt="">
-                                    <h2>テオティワカン / 月のピラミッドから / １枚目</h2>
+                            <!-- １枚目 -->
+                            <div id="image_area01">
+                                <img  class="slide_image" src="../img/basilica_191104.jpg" width="auto" height="100%" alt="メトロポリタン大聖堂">
+                                <h2>メトロポリタン大聖堂 / メキシコ / メキシコシティ </h2>
+                                <ul>
+                                    <li>機種： <span>NIKON/D7500</span></li>
+                                    <li>焦点距離：<span>36mm</span></li>
+                                    <li>撮影モード：<span>絞り優先モード</span></li>
+                                    <li>絞り：<span>F8.0</span></li>
+                                    <li>シャッタースピード：<span>1/400秒</span></li>
+                                    <li>ISO感度：<span>400</span></li>
+                                    <li>露出補正：<span>0</span></li>
+                                    <li>ホワイトバランス：<span>太陽光</span></li>
+                                </ul>
+                            </div>
+                            <!-- ２枚目 -->
+                            <div id="image_area02">
+                                <img  class="slide_image" src="../img/teotihuacan01_191104.jpg" width="100%" height="auto" alt="">
+                                <h2>テオティワカン / 月のピラミッドから / １枚目</h2>
                                 <ul>
                                     <li>機種： <span>NIKON/D7500</span></li>
                                     <li>焦点距離：<span>18mm</span></li>
@@ -229,24 +229,28 @@ createToken();
                         </div>
                     </div>
                     
+                    <!-- 月アイコン -->
                     <i id="moon" class="fas fa-moon"></i>
+
                     <!-- プロフィールページ/2ページ目 -->
                     <div id="sec_area">
                         <div class="profile">
                             <h1>プロフィール / Profile</h1>
                             <h2>REN HATTORI</h2>
                             <div class="profile_text_wrapper">
-                            <p>1986年生まれ<br>愛知県豊橋市出身、同県豊川市在住<br>21歳の頃１年間フィージとオーストラリアに語学留学＆ワーキングホリデーを使用して生活<br>その後30歳まで8年間テニスインストラクターとしてテニススクールへ勤務<br>趣味のカメラで撮影した写真を当サイトにて公開しております<br><br>Born in 1986<br>From Toyohashi,Aichi,Japan<br>Live in Toyokawa<br>Stayed Fiji and Australia for a year Since 21-years-old<br>Worked for Tennis Instructor for 8 years until 30-years-old<br>Release my photos that took as my hobby at this Website</p>
+                                <p>1986年生まれ<br>愛知県豊橋市出身、同県豊川市在住<br>21歳の頃１年間フィージとオーストラリアに語学留学＆ワーキングホリデーを使用して生活<br>その後30歳まで8年間テニスインストラクターとしてテニススクールへ勤務<br>趣味のカメラで撮影した写真を当サイトにて公開しております<br><br>Born in 1986<br>From Toyohashi,Aichi,Japan<br>Live in Toyokawa<br>Stayed Fiji and Australia for a year Since 21-years-old<br>Worked for Tennis Instructor for 8 years until 30-years-old<br>Release my photos that took as my hobby at this Website</p>
                             </div>
                         </div>
                     </div>
 
+                    <!-- 月アイコン-->
                     <i id="moon_y"class="fas fa-moon"></i>
+
                     <!-- お問い合わせページ/3ページ目 -->
                     <div id="thi_area">
                         <div class="contact_form">
                             <h1>お問い合わせ / Contact</h1>
-                            <form class="contact_form_area" action="" method="POST" novalidate>
+                            <form class="contact_form_area" action="" method="POST">
                                 <div class="input_area">
                                     <label for="name">お名前 / Name :</label>
                                     <input id="name" type="text" name="name" value="<?php echo h($post['name']); ?>" required>

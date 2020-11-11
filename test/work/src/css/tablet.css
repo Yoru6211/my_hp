@@ -2,29 +2,28 @@
 
     /* 全体文字大きさ */
     h1{
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
     h2{
-        font-size: 1em;
+        font-size: 1.3em;
     }
     p{
-        font-size: 0.5em;
+        font-size: 0.8em;
     }
 
 /* ヘッダータイトル＆ハンバーガーメニューアイコンエリア */
 #menu_icon{
-    font-size: 2em;
+    font-size: 3em;
 }
 #nav_list{
-    font-size: .3em;
-    margin-top: 100px;
+    /* font-size: .8em; */
+    /* overflow: auto; */
 }
-
 
 
 /* トップページ/1ページ目 */
 #top_area li{
-    font-size: 1em;
+    font-size: 1.3em;
 }
 .arrow{
     height: 3em;
