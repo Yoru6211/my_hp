@@ -1,7 +1,6 @@
 // ハンバーガーメニュー
 const menuIcon = document.getElementById('menu_icon');
 const navList = document.getElementById('nav_list');
-const menuBg = document.querySelector('.menu');
 const topLink = document.getElementById('top_link');
 const secLink = document.getElementById('sec_link');
 const thiLink = document.getElementById('thi_link');
@@ -10,17 +9,15 @@ const thiLink = document.getElementById('thi_link');
     //クローズメニューの関数
     function closeMenu(){
     navList.style.display = 'none';
-    menuBg.style.display = 'none';
     menuIcon.className = 'fa fa-bars';
    }
 
     menuIcon.addEventListener('click', () =>{
-        if(navList.style.display == 'block'){
-            closeMenu();
-        }else{
+        if(navList.style.display == 'none'){
             navList.style.display = 'block';
-            menuBg.style.display = 'block';
             menuIcon.className = 'fa fa-times';
+        }else{
+            closeMenu();
         }
     });
     

@@ -25,13 +25,9 @@
     #menu_icon{
         font-size: 3em;
     }
-    .menu{
-        max-width: 1024px;
-    }
     #nav_list{
         max-width: 1024px;
-        font-size: .5em;
-        margin-top: 200px;
+        font-size: 1em;
     }
     header ul{
         padding-top: 0;
