@@ -53,12 +53,12 @@
     /* トップページ/1ページ目 */
 
 
-    /* .slider img{
+    .slider img{
     max-width: 700px;
     max-height: 500px;
-} */
+}
     #top_area li{
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     .arrow{
         height: 4em;
@@ -80,11 +80,11 @@
 
     /* プロフィールページ/2ページ目 */
     #sec_area h2{
-        font-size: 1.7em;
+        font-size: 1.8em;
         margin-bottom: 60px;
     }
     #sec_area p{
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
 
@@ -92,18 +92,21 @@
 
 
     /* お問い合わせページ/3ページ目 */
+    .contact_form{
+        width: 60%;
+    }
     .contact_form_area label{
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     .contact_form button{
         font-size: 1em;
         height: 3em;
     }
     #name{
-        height: 3em;
+        font-size: 1.3em;
     }
     #email{
-        height: 3em;
+        font-size: 1.3em;
     }
     #message{
         height: 10em;
