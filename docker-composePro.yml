@@ -15,7 +15,7 @@ services:
         stdin_open: true
         networks:
             my_hp_net:
-                ipv4_address: 192.168.54.2    
+                ipv4_address: 192.168.0.11 
             
                     
     app:
@@ -27,7 +27,7 @@ services:
         stdin_open: true
         networks:
             my_hp_net:
-                ipv4_address: 192.168.54.3
+                ipv4_address: 192.168.0.12
 
     composer:
         image: composer:latest
@@ -43,7 +43,7 @@ networks:
         ipam:
             driver: default
             config:
-                - subnet: 192.168.54.0/24
+                - subnet: 192.168.0.0/24
 
 
 
