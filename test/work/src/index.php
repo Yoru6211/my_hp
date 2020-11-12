@@ -250,17 +250,17 @@ createToken();
                     <div id="thi_area">
                         <div class="contact_form">
                             <h1>お問い合わせ / Contact</h1>
-                            <form class="contact_form_area" action="" method="POST">
+                            <form class="contact_form_area" action="#thi_area" method="POST">
                                 <div class="input_area">
                                     <label for="name">お名前 / Name :</label>
-                                    <input id="name" type="text" name="name" value="<?php echo h($post['name']); ?>" required>
+                                    <input id="name" type="text" name="name" value="<?php echo h($post['name']); ?>">
                                     <?php if ($error['name'] === 'blank'): ?>
                                         <p class="warning">*お名前を入力してください</p>
                                     <?php endif; ?>
                                 </div>
                                 <div class="input_area">
                                     <label for="email">メールアドレス / Email :</label>
-                                    <input id="email" type="mail" name="email" value="<?php echo h($post['email']); ?>" required>
+                                    <input id="email" type="mail" name="email" value="<?php echo h($post['email']); ?>">
                                     <?php if ($error['email'] === 'blank'): ?>
                                         <p class="warning">*Emailアドレスを入力してください</p>
                                     <?php endif; ?>
@@ -270,7 +270,7 @@ createToken();
                                 </div>
                                 <div class="input_area">
                                     <label for="message">お問い合わせ内容 / Message :</label>
-                                    <textarea id="message" name="message" cols="20" rows="4" maxlength="20" required><?php echo h($post['message']); ?></textarea>
+                                    <textarea id="message" name="message" cols="20" rows="4" maxlength="20"><?php echo h($post['message']); ?></textarea>
                                     <?php if ($error['message'] === 'blank'): ?>
                                         <p class="warning">*お問い合わせ内容を入力してください</p>
                                     <?php endif; ?>
