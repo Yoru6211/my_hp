@@ -79,11 +79,11 @@ createToken();
                             <!-- １枚目 -->
                             <div id="image_area01">
                                 <img  class="slide_image" src="../img/basilica_191104.jpg" width="auto" height="100%" alt="メトロポリタン大聖堂">
-                                <h2>メトロポリタン大聖堂 / メキシコ / メキシコシティ </h2>
+                                <h2>メトロポリタン大聖堂 / メキシコシティ / メキシコ </h2>
                                 <ul>
                                     <li>機種： <span>NIKON/D7500</span></li>
                                     <li>焦点距離：<span>36mm</span></li>
-                                    <li>撮影モード：<span>絞り優先モード</span></li>
+                                    <li>撮影モード：<span>マニュアルモード</span></li>
                                     <li>絞り：<span>F8.0</span></li>
                                     <li>シャッタースピード：<span>1/400秒</span></li>
                                     <li>ISO感度：<span>400</span></li>
@@ -93,12 +93,27 @@ createToken();
                             </div>
                             <!-- ２枚目 -->
                             <div id="image_area02">
-                                <img  class="slide_image" src="../img/teotihuacan01_191104.jpg" width="100%" height="auto" alt="">
-                                <h2>テオティワカン / 月のピラミッドから / １枚目</h2>
+                                <img  class="slide_image" src="img/mexico_city_191104.jpg" width="100%" height="auto" alt="死者の日のメキシコシティの人々">
+                                <h2>死者の日 / メキシコシティ / メキシコ</h2>
+                                <ul>
+                                    <li>機種： <span>NIKON/D7500</span></li>
+                                    <li>焦点距離：<span>150mm</span></li>
+                                    <li>撮影モード：<span>マニュアルモード</span></li>
+                                    <li>絞り：<span>F8.0</span></li>
+                                    <li>シャッタースピード：<span>1/400秒</span></li>
+                                    <li>ISO感度：<span>640</span></li>
+                                    <li>露出補正：<span>0</span></li>
+                                    <li>ホワイトバランス：<span>太陽光</span></li>
+                                </ul>
+                            </div>
+                            <!-- ３枚目 -->
+                            <div id="image_area03">
+                                <img  class="slide_image" src="../img/teotihuacan01_191104.jpg" width="100%" height="auto" alt="月のピラミッドからの景色">
+                                <h2>月のピラミッドから / テオティワカン / メキシコ / １枚目</h2>
                                 <ul>
                                     <li>機種： <span>NIKON/D7500</span></li>
                                     <li>焦点距離：<span>18mm</span></li>
-                                    <li>撮影モード：<span>絞り優先モード</span></li>
+                                    <li>撮影モード：<span>マニュアルモード</span></li>
                                     <li>絞り：<span>F8.0</span></li>
                                     <li>シャッタースピード：<span>1/160秒</span></li>
                                     <li>ISO感度：<span>125</span></li>
@@ -106,14 +121,14 @@ createToken();
                                     <li>ホワイトバランス：<span>太陽光</span></li>
                                 </ul>
                             </div>
-                            <!-- ３枚目 -->
-                            <div id="image_area03">
-                                <img  class="slide_image" src="../img/teotihuacan02_191104.jpg" width="100%" height="auto" alt="">
-                                <h2>テオティワカン / 月のピラミッドから /  ２枚目</h2>
+                            <!-- ４枚目 -->
+                            <div id="image_area04">
+                                <img  class="slide_image" src="../img/teotihuacan02_191104.jpg" width="100%" height="auto" alt="月のピラミッドからの景色２枚目">
+                                <h2>月のピラミッドから / テオティワカン / メキシコ / ２枚目</h2>
                                 <ul>
                                     <li>機種： <span>NIKON/D7500</span></li>
                                     <li>焦点距離：<span>35mm</span></li>
-                                    <li>撮影モード：<span>絞り優先モード</span></li>
+                                    <li>撮影モード：<span>マニュアルモード</span></li>
                                     <li>絞り：<span>F1.8</span></li>
                                     <li>シャッタースピード：<span>1/1000秒</span></li>
                                     <li>ISO感度：<span>100</span></li>
@@ -121,111 +136,96 @@ createToken();
                                     <li>ホワイトバランス：<span>太陽光</span></li>
                                 </ul>
                             </div>
-                            <!-- ４枚目
-                            <div id="image_area04">
-                                <img  class="slide_image" src="../img/teotihuacan01_191104.jpg" width="100%" height="auto" alt="">
-                                <h2>タイトル１</h2>
-                                <ul>
-                                    <li>機種： <span>NIKON/D7500</span></li>
-                                    <li>焦点距離：<span>mm</span></li>
-                                    <li>撮影モード：<span>モード</span></li>
-                                    <li>絞り：<span>F</span></li>
-                                    <li>シャッタースピード：<span>秒</span></li>
-                                    <li>ISO感度：<span></span></li>
-                                    <li>露出補正：<span>0</span></li>
-                                    <li>ホワイトバランス：<span>太陽光</span></li>
-                                </ul>
-                            </div>
-                            ５枚目
+                            <!-- ５枚目 -->
                             <div id="image_area05">
-                                <img  class="slide_image" src="../img/teotihuacan01_191104.jpg" width="100%" height="auto" alt="">
-                                <h2>タイトル１</h2>
+                                <img  class="slide_image" src="img/museum_mexico_city_191102.jpg" width="100%" height="auto" alt="国立人類学物博物館">
+                                <h2>国立人類学物博物館 / メキシコシティ / メキシコ</h2>
                                 <ul>
                                     <li>機種： <span>NIKON/D7500</span></li>
-                                    <li>焦点距離：<span>mm</span></li>
-                                    <li>撮影モード：<span>モード</span></li>
-                                    <li>絞り：<span>F</span></li>
-                                    <li>シャッタースピード：<span>秒</span></li>
-                                    <li>ISO感度：<span></span></li>
+                                    <li>焦点距離：<span>24mm</span></li>
+                                    <li>撮影モード：<span>マニュアルモード</span></li>
+                                    <li>絞り：<span>F9.0</span></li>
+                                    <li>シャッタースピード：<span>1/100秒</span></li>
+                                    <li>ISO感度：<span>400</span></li>
                                     <li>露出補正：<span>0</span></li>
                                     <li>ホワイトバランス：<span>太陽光</span></li>
                                 </ul>
                             </div>
-                            ６枚目 -->
-                            <!-- <div id="image_area06">
-                                <img  class="slide_image" src="../img/teotihuacan01_191104.jpg" width="100%" height="auto" alt="">
-                                <h2>タイトル１</h2>
+                            <!-- ６枚目 --> 
+                            <div id="image_area06">
+                                <img  class="slide_image" src="img/sunrise_191103.jpg" width="100%" height="auto" alt="気球から眺める夜明け">
+                                <h2>気球から眺める夜明け / テオティワカン上空 / メキシコ</h2>
                                 <ul>
                                     <li>機種： <span>NIKON/D7500</span></li>
-                                    <li>焦点距離：<span>mm</span></li>
-                                    <li>撮影モード：<span>モード</span></li>
-                                    <li>絞り：<span>F</span></li>
-                                    <li>シャッタースピード：<span>秒</span></li>
-                                    <li>ISO感度：<span></span></li>
+                                    <li>焦点距離：<span>27mm</span></li>
+                                    <li>撮影モード：<span>マニュアルモード</span></li>
+                                    <li>絞り：<span>F7.1</span></li>
+                                    <li>シャッタースピード：<span>1/125秒</span></li>
+                                    <li>ISO感度：<span>800</span></li>
                                     <li>露出補正：<span>0</span></li>
                                     <li>ホワイトバランス：<span>太陽光</span></li>
                                 </ul>
                             </div>
-                            ７枚目
+                            <!-- ７枚目 -->
                             <div id="image_area07">
-                                <img  class="slide_image" src="../img/teotihuacan01_191104.jpg" width="100%" height="auto" alt="">
-                                <h2>タイトル１</h2>
+                                <img  class="slide_image" src="img/sunset_191124.jpg" width="100%" height="auto" alt="夕日と木々のシルエット">
+                                <h2>夕日と木々のシルエット / 万博公園 / 大阪</h2>
                                 <ul>
                                     <li>機種： <span>NIKON/D7500</span></li>
-                                    <li>焦点距離：<span>mm</span></li>
-                                    <li>撮影モード：<span>モード</span></li>
-                                    <li>絞り：<span>F</span></li>
-                                    <li>シャッタースピード：<span>秒</span></li>
-                                    <li>ISO感度：<span></span></li>
+                                    <li>焦点距離：<span>35mm</span></li>
+                                    <li>撮影モード：<span>マニュアルモード</span></li>
+                                    <li>絞り：<span>F1.8</span></li>
+                                    <li>シャッタースピード：<span>1/1600秒</span></li>
+                                    <li>ISO感度：<span>1000</span></li>
+                                    <li>露出補正：<span>+1.0</span></li>
+                                    <li>ホワイトバランス：<span>太陽光</span></li>
+                                </ul>
+                            </div>
+                            <!-- ８枚目 -->
+                                <div id="image_area08">
+                                <img  class="slide_image" src="img/mountain_view_200815.jpg" width="100%" height="auto" alt="山の景色">
+                                <h2>茶臼山からの景色 / 茶臼山 / 愛知県</h2>
+                                <ul>
+                                    <li>機種： <span>NIKON/D7500</span></li>
+                                    <li>焦点距離：<span>170mm</span></li>
+                                    <li>撮影モード：<span>マニュアルモード</span></li>
+                                    <li>絞り：<span>F11.0</span></li>
+                                    <li>シャッタースピード：<span>1/250秒</span></li>
+                                    <li>ISO感度：<span>200</span></li>
+                                    <li>露出補正：<span>0</span></li>
+                                    <li>ホワイトバランス：<span>太陽光</span></li>
+                                </ul>
+                            </div> 
+                            <!-- ９枚目 -->
+                            <div id="image_area09">
+                                <img  class="slide_image" src="img/water_side_200815.jpg" width="100%" height="auto" alt="水辺の写真">
+                                <h2>水辺 / 新城市 / 愛知県</h2>
+                                <ul>
+                                    <li>機種： <span>NIKON/D7500</span></li>
+                                    <li>焦点距離：<span>200mm</span></li>
+                                    <li>撮影モード：<span>マニュアルモード</span></li>
+                                    <li>絞り：<span>F5.6</span></li>
+                                    <li>シャッタースピード：<span>1/400秒</span></li>
+                                    <li>ISO感度：<span>1000</span></li>
                                     <li>露出補正：<span>0</span></li>
                                     <li>ホワイトバランス：<span>太陽光</span></li>
                                 </ul>
                             </div>
-                            ８枚目
-                                <div id="image_area08">
-                                <img  class="slide_image" src="../img/teotihuacan01_191104.jpg" width="100%" height="auto" alt="">
-                                <h2>タイトル１</h2>
-                                <ul>
-                                    <li>機種： <span>NIKON/D7500</span></li>
-                                    <li>焦点距離：<span>mm</span></li>
-                                    <li>撮影モード：<span>モード</span></li>
-                                    <li>絞り：<span>F</span></li>
-                                    <li>シャッタースピード：<span>秒</span></li>
-                                    <li>ISO感度：<span></span></li> -->
-                                    <!-- <li>露出補正：<span>0</span></li>
-                                    <li>ホワイトバランス：<span>太陽光</span></li>
-                                </ul> -->
-                            <!-- </div>  -->
-                            <!-- ９枚目
-                            <div id="image_area09">
-                                <img  class="slide_image" src="../img/teotihuacan01_191104.jpg" width="100%" height="auto" alt="">
-                                <h2>タイトル１</h2>
-                                <ul>
-                                    <li>機種： <span>NIKON/D7500</span></li>
-                                    <li>焦点距離：<span>mm</span></li>
-                                    <li>撮影モード：<span>モード</span></li>
-                                    <li>絞り：<span>F</span></li>
-                                    <li>シャッタースピード：<span>秒</span></li>
-                                    <li>ISO感度：<span></span></li>
-                                    <li>露出補正：<span>0</span></li>
-                                    <li>ホワイトバランス：<span>太陽光</span></li>
-                                </ul>
-                            </div> -->
-                            <!-- １０枚目
+                            <!-- １０枚目 -->
                             <div id="image_area10">
-                                <img  class="slide_image" src="../img/teotihuacan01_191104.jpg" width="100%" height="auto" alt="">
-                                <h2>タイトル１</h2>
+                                <img  class="slide_image" src="img/water_fall_shinshiro200815.jpg" width="100%" height="auto" alt="滝の写真">
+                                <h2>滝 / 新城市 / 愛知県</h2>
                                 <ul>
                                     <li>機種： <span>NIKON/D7500</span></li>
-                                    <li>焦点距離：<span>mm</span></li>
-                                    <li>撮影モード：<span>モード</span></li>
-                                    <li>絞り：<span>F</span></li>
-                                    <li>シャッタースピード：<span>秒</span></li>
-                                    <li>ISO感度：<span></span></li>
+                                    <li>焦点距離：<span>26mm</span></li>
+                                    <li>撮影モード：<span>マニュアルモード</span></li>
+                                    <li>絞り：<span>F20</span></li>
+                                    <li>シャッタースピード：<span>1/4秒</span></li>
+                                    <li>ISO感度：<span>Lo1.0</span></li>
                                     <li>露出補正：<span>0</span></li>
                                     <li>ホワイトバランス：<span>太陽光</span></li>
                                 </ul>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                     
@@ -253,14 +253,14 @@ createToken();
                             <form class="contact_form_area" action="#thi_area" method="POST">
                                 <div class="input_area">
                                     <label for="name">お名前 / Name :</label>
-                                    <input id="name" type="text" name="name" value="<?php echo h($post['name']); ?>">
+                                    <input id="name" type="text" name="name" maxlength="100" value="<?php echo h($post['name']); ?>">
                                     <?php if ($error['name'] === 'blank'): ?>
                                         <p class="warning">*お名前を入力してください</p>
                                     <?php endif; ?>
                                 </div>
                                 <div class="input_area">
                                     <label for="email">メールアドレス / Email :</label>
-                                    <input id="email" type="mail" name="email" value="<?php echo h($post['email']); ?>">
+                                    <input id="email" type="mail" name="email" maxlength="255" value="<?php echo h($post['email']); ?>">
                                     <?php if ($error['email'] === 'blank'): ?>
                                         <p class="warning">*Emailアドレスを入力してください</p>
                                     <?php endif; ?>
@@ -270,7 +270,7 @@ createToken();
                                 </div>
                                 <div class="input_area">
                                     <label for="message">お問い合わせ内容 / Message :</label>
-                                    <textarea id="message" name="message" cols="20" rows="4" maxlength="20"><?php echo h($post['message']); ?></textarea>
+                                    <textarea id="message" name="message" maxlength="1000"><?php echo h($post['message']); ?></textarea>
                                     <?php if ($error['message'] === 'blank'): ?>
                                         <p class="warning">*お問い合わせ内容を入力してください</p>
                                     <?php endif; ?>

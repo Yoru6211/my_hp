@@ -47,24 +47,24 @@ const imageNum = document.querySelector('.image_area_number');
 let area01 = document.getElementById('image_area01');
 let area02 = document.getElementById('image_area02');
 let area03 = document.getElementById('image_area03');
-// let area04 = document.getElementById('image_area04');
-// let area05 = document.getElementById('image_area05');
-// let area06 = document.getElementById('image_area06');
-// let area07 = document.getElementById('image_area07');
-// let area08 = document.getElementById('image_area08');
-// let area09 = document.getElementById('image_area09');
-// let area10 = document.getElementById('image_area10');
+let area04 = document.getElementById('image_area04');
+let area05 = document.getElementById('image_area05');
+let area06 = document.getElementById('image_area06');
+let area07 = document.getElementById('image_area07');
+let area08 = document.getElementById('image_area08');
+let area09 = document.getElementById('image_area09');
+let area10 = document.getElementById('image_area10');
 let imageAreas = [
     area01,
     area02,
     area03,
-    // area04,
-    // area05,
-    // area06,
-    // area07,
-    // area08,
-    // area09,
-    // area10,
+    area04,
+    area05,
+    area06,
+    area07,
+    area08,
+    area09,
+    area10,
 ];
 // デフォルト設定
 let currentIndex = 0;
