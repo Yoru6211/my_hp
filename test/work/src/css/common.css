@@ -60,7 +60,7 @@ body{
     transition: 1s ease-in;
 }
 
-/* ヘッダー */
+/* ヘッダーデザイン */
 header{
     width: 100%;
     display: flex;
@@ -102,6 +102,7 @@ header h2{
     cursor: pointer;
     z-index: 200;
 }
+
 /* メニューリスト */
 #nav_list{
     display: none;
@@ -134,16 +135,13 @@ header h2{
 
 
 
-
 /* トップページ */
 #top_area{
-    /* display: flex;
-    flex-direction: column;
-    position: relative; */
     width: 100%;
     height: auto;
     color: #ffffff;
 }
+/* アローボタン */
 .arrow{
     height: 6em;
     display: flex;
@@ -173,26 +171,7 @@ header h2{
     justify-content: center;
     font-size: 2em;
 }
-#top_area h2{
-    align-items: left;
-    margin: 1em 1.5em;
-    font-family: 'Noto Sans JP', sans-serif;
-}
-.top_image{
-    z-index: 10;
-    align-items: center;
-    margin-top: 50px;
-}
-#top_area ul{
-    list-style-type: none;
-    margin-top: 0;
-    font-family: 'Noto Sans JP', sans-serif;
-}
-#top_area li{
-    font-size: 2em;
-    line-height: 200%;
-}
-/* 画像エリア */
+/* 画像スライド*/
 .slider{
     width: 100％;
     height: auto;
@@ -233,6 +212,27 @@ header h2{
 #image_area10{
     display: none;
 }
+/* 画像詳細欄 */
+#top_area h2{
+    align-items: left;
+    margin: 1em 1.5em;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.top_image{
+    z-index: 10;
+    align-items: center;
+    margin-top: 50px;
+}
+#top_area ul{
+    list-style-type: none;
+    margin-top: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+#top_area li{
+    font-size: 2em;
+    line-height: 200%;
+}
+
 
 
 
@@ -254,21 +254,16 @@ header h2{
 
 
 
+
 /* プロフィール_2ページ目 */
 #sec_area{
     width: 100%;
     height: 100%;
-    /* position: relative;
-    display:flex;
-    text-align: center; */
 }
 .profile{
     position:relative;
     width: 100%;
     margin: 0 auto;
-    /* top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%); */
 }
 #sec_area h1{
     text-align: center;
@@ -293,29 +288,22 @@ header h2{
 
 
 
-
 /* お問い合わせ_3ページ目 */
 #thi_area{
     width: 100%;
     height: 100%;
     margin-bottom: 400px;
-    /* position: relative;
-    display:flex;
-    text-align: center; */
 }
 .contact_form{
     position: relative;
     width: 80%;
     margin: 0 auto;
-    /* top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%); */
 }
 #thi_area h1{
     text-align: center;
     margin-bottom: 80px;
 }
+/* インプット欄 */
 #name{
     width: 100%;
     height: auto;
@@ -379,6 +367,9 @@ header h2{
     box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
     transform: translateY(2px);
 }
+
+
+
 
 
 /* フッター */

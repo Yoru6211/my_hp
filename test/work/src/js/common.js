@@ -36,6 +36,8 @@ const thiLink = document.getElementById('thi_link');
 
 
 
+
+
 // トップページ画像のスライド
 const preArrow = document.getElementById('arrow_left');
 const nextArrow = document.getElementById('arrow_right');
@@ -68,7 +70,6 @@ let imageAreas = [
 ];
 // デフォルト設定
 let currentIndex = 0;
-// imageAreas[currentIndex].style.display = "block";
 let lastNum = imageAreas.length;
 imageNum.innerHTML = (currentIndex + 1) + "/" + lastNum;
 
@@ -100,6 +101,8 @@ imageNum.innerHTML = (currentIndex + 1) + "/" + lastNum;
     });
 
 
+
+    
 
 // スクロールによる背景色変更
 const default_bg = document.querySelector(".default_bg");

@@ -41,13 +41,13 @@ createToken();
         <link rel="stylesheet" type="text/css" href="./css/common.css">
         <link rel="stylesheet" type="text/css" href="./css/pc.css">
         <link rel="stylesheet" type="text/css" href="./css/tablet.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-
     </head>
     <body>
-        <div class="default_bg">      
+        <!-- 背景エリア -->
+        <div class="default_bg"> 
+            <!-- ヘッダーメニュー      -->
             <header>
                 <i id="menu_icon" class="fas fa-bars"></i>
                     <nav id="nav_list">
@@ -78,7 +78,7 @@ createToken();
                             </div>
                             <!-- １枚目 -->
                             <div id="image_area01">
-                                <img  class="slide_image" src="../img/basilica_191104.jpg" width="auto" height="100%" alt="メトロポリタン大聖堂">
+                                <img  class="slide_image" src="/img/basilica_191104.jpg" width="auto" height="100%" alt="メトロポリタン大聖堂">
                                 <h2>メトロポリタン大聖堂 / メキシコシティ / メキシコ </h2>
                                 <ul>
                                     <li>機種： <span>NIKON/D7500</span></li>
@@ -108,7 +108,7 @@ createToken();
                             </div>
                             <!-- ３枚目 -->
                             <div id="image_area03">
-                                <img  class="slide_image" src="../img/teotihuacan01_191104.jpg" width="100%" height="auto" alt="月のピラミッドからの景色">
+                                <img  class="slide_image" src="/img/teotihuacan01_191104.jpg" width="100%" height="auto" alt="月のピラミッドからの景色">
                                 <h2>月のピラミッドから / テオティワカン / メキシコ / １枚目</h2>
                                 <ul>
                                     <li>機種： <span>NIKON/D7500</span></li>
@@ -123,7 +123,7 @@ createToken();
                             </div>
                             <!-- ４枚目 -->
                             <div id="image_area04">
-                                <img  class="slide_image" src="../img/teotihuacan02_191104.jpg" width="100%" height="auto" alt="月のピラミッドからの景色２枚目">
+                                <img  class="slide_image" src="/img/teotihuacan02_191104.jpg" width="100%" height="auto" alt="月のピラミッドからの景色２枚目">
                                 <h2>月のピラミッドから / テオティワカン / メキシコ / ２枚目</h2>
                                 <ul>
                                     <li>機種： <span>NIKON/D7500</span></li>
@@ -285,10 +285,12 @@ createToken();
                     </div>
                 </main>
             </div>
+
             <footer>
                 <small>© REN HATTORI PHOTO GALLARY</small>
             </footer>
+
         </div>
-                <script type="text/javascript" src="/js/common.js"></script>
+        <script type="text/javascript" src="/js/common.js"></script>
      </body>
 </html>

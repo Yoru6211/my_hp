@@ -90,7 +90,6 @@ echo 'メールの送信に失敗しました。';
 echo 'もう一度送信いただくか少しお時間をおいてから再度送信してください。';
 exit();
 } 
-
 ?> 
 
 <!DOCTYPE html>
@@ -100,13 +99,12 @@ exit();
 <title>送信完了</title>
 <meta name="veiwport" content="width=device-width,initial-scale = 1"> 
 <link rel="stylesheet" type="text/css" href="../css/send.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
+    
     <main>
         <div class="send">
             <h1>お問い合わせありがとうございます。送信が完了いたしました。</h1>
@@ -116,8 +114,10 @@ exit();
             <a href="../index.php">トップページへ戻る</a>       
         </div>
     <main>
+
     <footer>
         <small>© REN HATTORI PHOTO GALLARY</small>
     </footer>
+
 </body>
 </html>

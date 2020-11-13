@@ -11,75 +11,81 @@
         font-size: 0.8em;
     }
 
-/* ヘッダータイトル＆ハンバーガーメニューアイコンエリア */
-#menu_icon{
-    font-size: 3em;
-}
-#nav_list{
-    /* font-size: .8em; */
-    /* overflow: auto; */
-}
-
-
-/* トップページ/1ページ目 */
-#top_area li{
-    font-size: 1.3em;
-}
-.arrow{
-    height: 3em;
-}
-#arrow_left{
-    font-size: 3em;
-    left: 4em;
-}
-#arrow_right{
-    font-size: 3em;
-    right: 4em;
-}
-.image_area_number{
-    font-size: 1em;
-}
 
 
 
 
-/* プロフィールページ/2ページ目 */
-#sec_area h2{
-    font-size: 1.2em;
-    margin-bottom: 60px;
-}
-#sec_area p{
-    font-size: 1em;
-}
+    /* ヘッダータイトル＆ハンバーガーメニューアイコンエリア */
+    #menu_icon{
+        font-size: 3em;
+    }
 
 
 
 
 
-/* お問い合わせページ/3ページ目 */
-.contact_form_area label{
-    font-size: 1em;
-}
-.contact_form button{
-    font-size: .5em;
-    height: 4em;
-}
-#name{
-    height: 3em;
-}
-#email{
-    height: 3em;
-}
-#message{
-    height: 10em;
-}
+    /* トップページ/1ページ目 */
+    #top_area li{
+        font-size: 1.3em;
+    }
+    .arrow{
+        height: 3em;
+    }
+    #arrow_left{
+        font-size: 3em;
+        left: 4em;
+    }
+    #arrow_right{
+        font-size: 3em;
+        right: 4em;
+    }
+    .image_area_number{
+        font-size: 1em;
+    }
 
 
 
-/* フッター */
-footer{
-    height: 30px;
-    font-size: .5em;
-}
+
+
+    /* プロフィールページ/2ページ目 */
+    #sec_area h2{
+        font-size: 1.2em;
+        margin-bottom: 60px;
+    }
+    #sec_area p{
+        font-size: 1em;
+    }
+
+
+
+
+
+    /* お問い合わせページ/3ページ目 */
+    .contact_form_area label{
+        font-size: 1em;
+    }
+    .contact_form button{
+        font-size: .5em;
+        height: 4em;
+    }
+    #name{
+        height: 3em;
+    }
+    #email{
+        height: 3em;
+    }
+    #message{
+        height: 10em;
+    }
+
+
+    
+
+
+    /* フッター */
+    footer{
+        height: 30px;
+        font-size: .5em;
+    }
 
 }

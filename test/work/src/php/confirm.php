@@ -18,7 +18,6 @@ if(!isset($_SESSION['form'])){
 <title>入力フォーム確認画面</title>
 <meta name="veiwport" content="width=device-width,initial-scale = 1"> 
 <link rel="stylesheet" type="text/css" href="../css/confirm.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
@@ -39,19 +38,21 @@ if(!isset($_SESSION['form'])){
                     <tr>
                         <th>お問い合わせ内容 / Message</th><td><?php echo nl2br(h($post['message'])); ?></td>
                     </tr>
-                    
-
                 </table>
             </div>
             <p>入力内容にお間違えがなければ送信ボタンを押してください。<br>入力し直す場合は戻るボタンで戻った後、再度入力してください。</p>
+           
             <div class="buttons">
                 <a href="../index.php">戻る</a>
                 <button type="submit">送信する</button>
             </div>
+       
         </form>
     </div>
+
     <footer>
         <small>© REN HATTORI PHOTO GALLARY</small>
     </footer>
+    
 </body>
 </html>
