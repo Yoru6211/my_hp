@@ -58,7 +58,7 @@ createToken();
                         </ul>
                     </nav>
                     <div class="site_name">
-                        <h1>REN HATTORI <br>&emsp;PHOTO GALLARY</h1>
+                        <h1>REN HATTORI <br>&emsp;PHOTO GALLERY</h1>
                         <h2>#刻のしおり</h2>
                     </div>
             </header>
