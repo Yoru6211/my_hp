@@ -238,7 +238,7 @@ createToken();
                             <h1>プロフィール / Profile</h1>
                             <h2>REN HATTORI</h2>
                             <div class="profile_text_wrapper">
-                                <p>1986年生まれ<br>愛知県豊橋市出身、同県豊川市在住<br>21歳の頃１年間フィージとオーストラリアに語学留学＆ワーキングホリデーを使用して生活<br>その後30歳まで8年間テニスインストラクターとしてテニススクールへ勤務<br>趣味のカメラで撮影した写真を当サイトにて公開しております<br><br>Born in 1986<br>From Toyohashi,Aichi,Japan<br>Live in Toyokawa<br>Stayed Fiji and Australia for a year Since 21-years-old<br>Worked for Tennis Instructor for 8 years until 30-years-old<br>Release my photos that took as my hobby at this Website</p>
+                                <p>1986年生まれ<br>愛知県豊橋市出身、同県豊川市在住<br>21歳の頃１年間フィージとオーストラリアに語学留学＆ワーキングホリデーを使用して生活<br>その後30歳まで8年間テニスインストラクターとしてテニススクールへ勤務<br>趣味のカメラで撮影した写真を当サイトにて公開しております<br><br>Born in 1986,Toyohashi,Aichi,Japan<br>Currently live in Toyokawa<br>Had stayed in Fiji and Australia for a year since 21 years old<br>Had worked as Professional Tennis Instructor for 8 years<br>Sharing my photos as my hobby at this website</p>
                             </div>
                         </div>
                     </div>
