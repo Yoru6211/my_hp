@@ -6,9 +6,9 @@
 撮影した写真に加えて、写真の情報（撮影機種、焦点距離、撮影モード、絞り、シャッタースピード、ISO感度、露出補正、ホワイトバランス）も合わせて
 公開しています。
 
-<img src="https://github.com/Yoru6211/my_hp/blob/archive/my_hp_images01.png" width="400" height="380">
-<img src="https://github.com/Yoru6211/my_hp/blob/archive/my_hp_images02.png" width="400" height="380">
-<img src="https://github.com/Yoru6211/my_hp/blob/archive/my_hp_images03.png" width="400" height="380">
+<img src="https://github.com/Yoru6211/my_hp/blob/archive/my_hp_top.png" width="400" height="380">
+<img src="https://github.com/Yoru6211/my_hp/blob/archive/my_hp_top_02.png" width="400" height="380">
+<img src="https://github.com/Yoru6211/my_hp/blob/archive/my_hp_top_06.png" width="400" height="380">
 <img src="https://github.com/Yoru6211/my_hp/blob/archive/my_hp_profile.png" width="400" height="380">
 <img src="https://github.com/Yoru6211/my_hp/blob/archive/my_hp_contact.png" width="400" height="380">
 
