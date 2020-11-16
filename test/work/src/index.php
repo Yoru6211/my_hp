@@ -73,8 +73,8 @@ createToken();
                             <!-- アローボタン -->
                             <div class="arrow">
                                 <i id="arrow_left" class="fas fa-angle-double-left"></i>
-                                <i id="arrow_right" class="fas fa-angle-double-right"></i>
                                 <p class="image_area_number"></p>
+                                <i id="arrow_right" class="fas fa-angle-double-right"></i>
                             </div>
                             <!-- １枚目 -->
                             <div id="image_area01">
