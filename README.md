@@ -1,6 +1,7 @@
 # my_hp
 
-撮影した写真を公開するためのホームページです。
+撮影した写真を公開するためのホームページです。<br>
+http://photogallery.renhattori.com/
 
 ## 概要
 撮影した写真に加えて、写真の情報（撮影機種、焦点距離、撮影モード、絞り、シャッタースピード、ISO感度、露出補正、ホワイトバランス）も合わせて
@@ -35,5 +36,5 @@
 ・AMI - ubuntu20.04
 
 ## 作成情報
-・作成者:Ren Hattori
+・作成者:Ren Hattori<br>
 ・Email:ren.h.contact@gmail.com 
