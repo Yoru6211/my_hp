@@ -23,10 +23,6 @@
 
 ## データベース
 ・MySQL 8.0.22
- 
-## ソースコード・バージョン管理
-・git
- -Github
 　
 ## 開発環境
 ・macOS Catalina 10.15.7
@@ -37,21 +33,7 @@
 ・AWS<br>
 ・インスタンスタイプ-EC2<br>
 ・AMI - ubuntu20.04
- 
-## テスト
-・手動テスト
-対象ブラウザ：chrome/safari/firefox/Microsofe Edge
-対象デバイス：Macbookpro/WindowsPC/iPhpneXR/iPad6
-以下はクリアしています。
-(1)画面幅を変えた時レイアウトが崩れないか
-(2)メニューボタンを高速で連打してもエラーが起きないか
 
-## 開発工程
-今回ローカル開発環境としてMacbookへDockerとDocker-composeをインストール、DockerfileとDocker-compose.ymlファイルを作成してnginx/php/mysql
-のイメージを作成し、それらのイメージを元にコンテナを構築しました。
-
-
- 
 ## 作成情報
 ・作成者:Ren Hattori
 ・Email:ren.h.contact@gmail.com 
