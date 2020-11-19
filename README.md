@@ -13,14 +13,17 @@ http://photogallery.renhattori.com/
 <img src="https://github.com/Yoru6211/my_hp/blob/archive/my_hp_profile.png" width="400" height="380">
 <img src="https://github.com/Yoru6211/my_hp/blob/archive/my_hp_contact.png" width="400" height="380">
 
+## 利用クラウドサービス
+・AWS(EC2)
+
 ## 使用言語
 ・HTML
 ・CSS
 ・JavaScript
-・PHP
+・PHP7.4.12
 
 ## Webサーバー
-・nginx
+・Ubuntu20.04 / nginx1.19.3
 
 ## データベース
 ・MySQL 8.0.22
@@ -29,11 +32,6 @@ http://photogallery.renhattori.com/
 ・macOS Catalina 10.15.7
 ・Docker 19.03.8<br>
 ・Docker-compose 1.25.0
- 
-## 本番環境
-・AWS<br>
-・インスタンスタイプ-EC2<br>
-・AMI - ubuntu20.04
 
 ## 作成情報
 ・作成者:Ren Hattori<br>
