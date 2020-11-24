@@ -24,7 +24,6 @@ use PHPMailer\PHPMailer\Exception;
  // データベースへお問い合わせ情報を保存
  try{
     $db = new PDO($dsn,$db_user,$db_passwd);
-}catch(PDOException $e){
     $sql = "INSERT INTO contact (name, email, message, created) VALUES(:name, :email, :message, now())";
     
     $stmt = $db->prepare($sql);
@@ -32,6 +31,7 @@ use PHPMailer\PHPMailer\Exception;
     $params = array(':name' => $post['name'], ':email' => $post['email'], ':message' => $post['message']);
     
     $stmt->execute($params);
+    }catch(PDOException $e){
     echo 'データベースに接続できませんでした' . $e->getMessage();
 }
 
