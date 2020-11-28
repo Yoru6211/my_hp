@@ -37,7 +37,7 @@ createToken();
     <head>
         <meta charset="utf-8">
         <title>RenHattori PhotoGallery</title>
-        <meta name="veiwport" content="width=device-width,initial-scale = 1"> 
+        <meta name="veiwport" content="width=device-width,initial-scale=1"> 
         <link rel="stylesheet" type="text/css" href="./css/common.css">
         <link rel="stylesheet" type="text/css" href="./css/pc.css">
         <link rel="stylesheet" type="text/css" href="./css/tablet.css">
