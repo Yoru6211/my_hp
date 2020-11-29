@@ -28,10 +28,13 @@ services:
             TZ: Asia/Tokyo
         volumes:
             - 'my_db:/var/lib/mysql'
+            - './mysql/my.cnf:/etc/mysql/conf.d/my.cnf'
         ports:
             - '3306:3306'
-        command: mysqld --character-set-server=utf8mb4
-                --collation-server=utf8mb4_unicode_ci
+        # command: mysqld --character-set-server=utf8mb4
+        #         --collation-server=utf8mb4_unicode_ci
+        #          client --default-character-set=utf8mb4
+
         networks:
             my_hp_net:
                 ipv4_address: 192.168.0.13       
