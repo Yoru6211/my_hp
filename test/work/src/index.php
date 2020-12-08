@@ -9,7 +9,7 @@ createToken();
   $error = [];
   
   // 送信ボタンが押された時の処理
-  if($_SERVER['REQUEST_METHOD'] === 'POST'){
+  if($_SERVER['REQUEST_METHOD' === 'POST']){
     validateToken();
     $post = filter_input_array(INPUT_POST, $_POST);
     // フォーム送信時のエラーチェック
