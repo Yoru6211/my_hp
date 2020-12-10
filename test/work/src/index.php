@@ -9,7 +9,7 @@ createToken();
   $error = [];
   
   // 送信ボタンが押された時の処理
-  if($_SERVER['REQUEST_METHOD'] === 'POST'){
+  if($_SERVER['REQUEST_METHOD' === 'POST']){
     validateToken();
     $post = filter_input_array(INPUT_POST, $_POST);
     // フォーム送信時のエラーチェック
@@ -37,7 +37,7 @@ createToken();
     <head>
         <meta charset="utf-8">
         <title>RenHattori PhotoGallery</title>
-        <meta name="veiwport" content="width=device-width,initial-scale = 1"> 
+        <meta name="veiwport" content="width=device-width,initial-scale=1"> 
         <link rel="stylesheet" type="text/css" href="./css/common.css">
         <link rel="stylesheet" type="text/css" href="./css/pc.css">
         <link rel="stylesheet" type="text/css" href="./css/tablet.css">
